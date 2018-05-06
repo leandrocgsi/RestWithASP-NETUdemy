@@ -9,27 +9,25 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using RestWithASPNETUdemy.Services;
 using RestWithASPNETUdemy.Services.Implementattions;
+using RestWithASPNETUdemy.Model.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace RestWithASPNETUdemy
 {
     public class Startup
     {
-        public Startup(IHostingEnvironment env)
+        public Startup(IConfiguration configuration)
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-                .AddEnvironmentVariables();
-            Configuration = builder.Build();
+
         }
 
-        public IConfigurationRoot Configuration { get; }
+        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Add framework services.
+            var connection = Configuration["MySqlConnection:MySqlConnectionString"];
+            services.AddDbContext<MySQLContext>(options => options.UseMySql(connection));
             services.AddMvc();
 
             //Dependency Injection
