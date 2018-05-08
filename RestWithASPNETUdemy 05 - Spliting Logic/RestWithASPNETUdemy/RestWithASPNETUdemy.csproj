@@ -5,6 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Business\Implementattions\PersonServiceImpl.cs" />
+    <Compile Remove="Repository\Implementattions\PersonBusinessImpl.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Business\Implementattions\PersonBusinessImpl.cs" />
+    <Compile Include="Repository\Implementattions\PersonRepositoryImpl.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

@@ -5,14 +5,14 @@ using RestWithASPNETUdemy.Model.Context;
 using System;
 using System.Linq;
 
-namespace RestWithASPNETUdemy.Services.Implementattions
+namespace RestWithASPNETUdemy.Repository.Implementattions
 {
-    public class PersonServiceImpl : IPersonService
+    public class PersonRepositoryImpl : IPersonRepository
     {
 
-        private MySQLContext _context;
+        private readonly MySQLContext _context;
 
-        public PersonServiceImpl(MySQLContext context)
+        public PersonRepositoryImpl(MySQLContext context)
         {
             _context = context;
         }
@@ -76,14 +76,11 @@ namespace RestWithASPNETUdemy.Services.Implementattions
         // uma pessoa a partir de um ID
         public void Delete(long id)
         {
-            var result = _context.Persons.SingleOrDefault(p => p.Id.Equals(id));
+            var result = _context.Persons.SingleOrDefault(i => i.Id.Equals(id));
             try
             {
-                if (result != null)
-                {
-                    _context.Persons.Remove(result);
-                    _context.SaveChanges();
-                }
+                if (result != null) _context.Persons.Remove(result);
+                _context.SaveChanges();
             }
             catch (Exception ex)
             {
@@ -91,9 +88,9 @@ namespace RestWithASPNETUdemy.Services.Implementattions
             }
         }
 
-        private bool Exists(long? id)
+        public bool Exists(long? id)
         {
-            return _context.Persons.Any(p => p.Id.Equals(id));
+            return _context.Persons.Any(b => b.Id.Equals(id));
         }
     }
 }
