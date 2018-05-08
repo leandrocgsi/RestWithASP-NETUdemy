@@ -1,14 +1,16 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using RestWithASPNETUdemy.Model.Context;
-using Microsoft.EntityFrameworkCore;
 using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Business.Implementattions;
-using RestWithASPNETUdemy.Repository.Implementattions;
-using RestWithASPNETUdemy.Repository;
+using RestWithASPNETUdemy.Model.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace RestWithASPNETUdemy
 {
@@ -30,7 +32,6 @@ namespace RestWithASPNETUdemy
 
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImpl>();
-            services.AddScoped<IPersonRepository, PersonRepositoryImpl>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

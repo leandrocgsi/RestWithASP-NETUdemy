@@ -1,15 +1,13 @@
 ﻿using System.Collections.Generic;
 using RestWithASPNETUdemy.Model;
-using System.Threading;
 using RestWithASPNETUdemy.Model.Context;
 using System;
 using System.Linq;
 
-namespace RestWithASPNETUdemy.Repository.Implementattions
+namespace RestWithASPNETUdemy.Business.Implementattions
 {
     public class PersonRepositoryImpl : IPersonRepository
     {
-
         private readonly MySQLContext _context;
 
         public PersonRepositoryImpl(MySQLContext context)

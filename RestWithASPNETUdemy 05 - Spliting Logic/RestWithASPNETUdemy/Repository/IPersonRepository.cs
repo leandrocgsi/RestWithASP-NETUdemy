@@ -1,7 +1,7 @@
 ﻿using RestWithASPNETUdemy.Model;
 using System.Collections.Generic;
 
-namespace RestWithASPNETUdemy.Repository
+namespace RestWithASPNETUdemy.Business
 {
     public interface IPersonRepository
     {
