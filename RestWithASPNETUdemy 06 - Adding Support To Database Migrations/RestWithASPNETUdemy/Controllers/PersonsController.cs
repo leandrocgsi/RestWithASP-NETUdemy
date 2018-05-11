@@ -4,7 +4,7 @@ using RestWithASPNETUdemy.Business;
 namespace RestWithASPNETUdemy.Controllers
 {
 
-    /* Mapeia as requisições de http://localhost:{porta}/api/person/
+    /* Mapeia as requisições de http://localhost:{porta}/api/persons/v1/
     Por padrão o ASP.NET Core mapeia todas as classes que extendem Controller
     pegando a primeira parte do nome da classe em lower case [Person]Controller
     e expõe como endpoint REST
@@ -22,7 +22,7 @@ namespace RestWithASPNETUdemy.Controllers
             _personBusiness = personBusiness;
         }
 
-        //Mapeia as requisições GET para http://localhost:{porta}/api/person/
+        //Mapeia as requisições GET para http://localhost:{porta}/api/persons/v1/
         //Get sem parâmetros para o FindAll --> Busca Todos
         [HttpGet("v1")]
         public IActionResult Get()
@@ -30,7 +30,7 @@ namespace RestWithASPNETUdemy.Controllers
             return Ok(_personBusiness.FindAll());
         }
 
-        //Mapeia as requisições GET para http://localhost:{porta}/api/person/{id}
+        //Mapeia as requisições GET para http://localhost:{porta}/api/persons/v1/{id}
         //recebendo um ID como no Path da requisição
         //Get com parâmetros para o FindById --> Busca Por ID
         [HttpGet("v1/{id}")]
@@ -41,7 +41,7 @@ namespace RestWithASPNETUdemy.Controllers
             return Ok(person);
         }
 
-        //Mapeia as requisições POST para http://localhost:{porta}/api/person/
+        //Mapeia as requisições POST para http://localhost:{porta}/api/persons/v1/
         //O [FromBody] consome o Objeto JSON enviado no corpo da requisição
         [HttpPost("v1")]
         public IActionResult Post([FromBody]Person person)
@@ -50,7 +50,7 @@ namespace RestWithASPNETUdemy.Controllers
             return new  ObjectResult(_personBusiness.Create(person));
         }
 
-        //Mapeia as requisições PUT para http://localhost:{porta}/api/person/
+        //Mapeia as requisições PUT para http://localhost:{porta}/api/persons/v1/
         //O [FromBody] consome o Objeto JSON enviado no corpo da requisição
         [HttpPut("v1/{id}")]
         public IActionResult Put([FromBody]Person person)
@@ -60,7 +60,7 @@ namespace RestWithASPNETUdemy.Controllers
         }
 
 
-        //Mapeia as requisições DELETE para http://localhost:{porta}/api/person/{id}
+        //Mapeia as requisições DELETE para http://localhost:{porta}/api/persons/v1/{id}
         //recebendo um ID como no Path da requisição
         [HttpDelete("v1/{id}")]
         public IActionResult Delete(int id)
