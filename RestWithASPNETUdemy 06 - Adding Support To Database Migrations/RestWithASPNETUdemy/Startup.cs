@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
+
 using RestWithASPNETUdemy.Model.Context;
 using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Business.Implementattions;
@@ -15,7 +16,6 @@ namespace RestWithASPNETUdemy
 {
     public class Startup
     {
-
         private readonly ILogger _logger;
         public IConfiguration _configuration { get; }
         public IHostingEnvironment _environment { get; }
@@ -27,17 +27,18 @@ namespace RestWithASPNETUdemy
             _logger = logger;
         }
 
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connection = _configuration["MySqlConnection:MySqlConnectionString"];
-            services.AddDbContext<MySQLContext>(options => options.UseMySql(connection));
+            var connectionString = _configuration["MySqlConnection:MySqlConnectionString"];
+            services.AddDbContext<MySQLContext>(options => options.UseMySql(connectionString));
 
             if (_environment.IsDevelopment())
             {
                 try
                 {
-                    var evolveConnection = new MySql.Data.MySqlClient.MySqlConnection(connection);
+                    var evolveConnection = new MySql.Data.MySqlClient.MySqlConnection(connectionString);
 
                     var evolve = new Evolve.Evolve("evolve.json", evolveConnection, msg => _logger.LogInformation(msg))
                     {
@@ -46,6 +47,7 @@ namespace RestWithASPNETUdemy
                     };
 
                     evolve.Migrate();
+
                 }
                 catch (Exception ex)
                 {
