@@ -52,7 +52,7 @@ namespace RestWithASPNETUdemy.Controllers
 
         //Mapeia as requisições PUT para http://localhost:{porta}/api/persons/v1/
         //O [FromBody] consome o Objeto JSON enviado no corpo da requisição
-        [HttpPut("v1/{id}")]
+        [HttpPut("v1")]
         public IActionResult Put([FromBody]Person person)
         {
             if (person == null) return BadRequest();
