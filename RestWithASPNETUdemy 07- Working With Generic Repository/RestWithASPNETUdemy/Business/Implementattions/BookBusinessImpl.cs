@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
 using RestWithASPNETUdemy.Model;
+using RestWithASPNETUdemy.Repository.Generic;
 
 namespace RestWithASPNETUdemy.Business.Implementattions
 {
     public class BookBusinessImpl : IBookBusiness
     {
 
-        private readonly IBookRepository _repository;
+        private IRepository<Book> _repository;
 
-        public BookBusinessImpl(IBookRepository repository)
+        public BookBusinessImpl(IRepository<Book> repository)
         {
             _repository = repository;
         }
