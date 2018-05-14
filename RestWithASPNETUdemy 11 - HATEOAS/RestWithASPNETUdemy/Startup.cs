@@ -8,14 +8,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 
-using Microsoft.Net.Http.Headers;
-
 using RestWithASPNETUdemy.Model.Context;
 using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Business.Implementattions;
 using RestWithASPNETUdemy.Repository.Generic;
-using HyperMedia;
-using RestWithASPNETUdemy.HyperMedia;
+using Microsoft.Net.Http.Headers;
 
 namespace RestWithASPNETUdemy
 {
@@ -61,7 +58,7 @@ namespace RestWithASPNETUdemy
                 }
             }
 
-			//SEE More Details in:  https://blog.jeremylikness.com/5-rest-api-designs-in-dot-net-core-1-29a8527e999chttps://blog.jeremylikness.com/5-rest-api-designs-in-dot-net-core-1-29a8527e999c
+            //SEE More Details in:  https://blog.jeremylikness.com/5-rest-api-designs-in-dot-net-core-1-29a8527e999chttps://blog.jeremylikness.com/5-rest-api-designs-in-dot-net-core-1-29a8527e999c
             services.AddMvc(options =>
             {
                 options.RespectBrowserAcceptHeader = true;
@@ -70,12 +67,6 @@ namespace RestWithASPNETUdemy
 
             })
             .AddXmlSerializerFormatters();
-
-			
-			//See: https://shatzisblog.wordpress.com/2017/09/01/generating-hypermedia-links-for-an-asp-net-core-web-api/
-            var filtertOptions = new HyperMediaFilterOptions();
-            filtertOptions.ObjectContentResponseEnricherList.Add(new PersonEnricher());
-            services.AddSingleton(filtertOptions);
 
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImpl>();
@@ -94,12 +85,7 @@ namespace RestWithASPNETUdemy
             loggerFactory.AddConsole(_configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "DefaultApi",
-                    template: "{controller=Values}/{id?}");
-            });
+            app.UseMvc();
         }
     }
 }
