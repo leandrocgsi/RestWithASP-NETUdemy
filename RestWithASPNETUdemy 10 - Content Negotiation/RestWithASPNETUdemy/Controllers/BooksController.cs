@@ -11,7 +11,8 @@ namespace RestWithASPNETUdemy.Controllers
     pegando a primeira parte do nome da classe em lower case [Book]Controller
     e expõe como endpoint REST
     */
-    [Route("api/[controller]")]
+    [ApiVersion("1")]
+    [Route("api/[controller]/v{version:apiVersion}")]
     public class BooksController : Controller
     {
         //Declaração do serviço usado
@@ -26,7 +27,7 @@ namespace RestWithASPNETUdemy.Controllers
 
         //Mapeia as requisições GET para http://localhost:{porta}/api/books/v1/
         //Get sem parâmetros para o FindAll --> Busca Todos
-        [HttpGet("v1")]
+        [HttpGet]
         public IActionResult Get()
         {
             return Ok(_bookBusiness.FindAll());
@@ -35,7 +36,7 @@ namespace RestWithASPNETUdemy.Controllers
         //Mapeia as requisições GET para http://localhost:{porta}/api/books/v1/{id}
         //recebendo um ID como no Path da requisição
         //Get com parâmetros para o FindById --> Busca Por ID
-        [HttpGet("v1/{id}")]
+        [HttpGet("{id}")]
         public IActionResult Get(long id)
         {
             var book = _bookBusiness.FindById(id);
@@ -45,7 +46,7 @@ namespace RestWithASPNETUdemy.Controllers
 
         //Mapeia as requisições POST para http://localhost:{porta}/api/books/v1/
         //O [FromBody] consome o Objeto JSON enviado no corpo da requisição
-        [HttpPost("v1")]
+        [HttpPost]
         public IActionResult Post([FromBody]BookVO book)
         {
             if (book == null) return BadRequest();
@@ -54,7 +55,7 @@ namespace RestWithASPNETUdemy.Controllers
 
         //Mapeia as requisições PUT para http://localhost:{porta}/api/books/v1/
         //O [FromBody] consome o Objeto JSON enviado no corpo da requisição
-        [HttpPut("v1")]
+        [HttpPut]
         public IActionResult Put([FromBody]BookVO book)
         {
             if (book == null) return BadRequest();
@@ -66,7 +67,7 @@ namespace RestWithASPNETUdemy.Controllers
 
         //Mapeia as requisições DELETE para http://localhost:{porta}/api/books/v1/{id}
         //recebendo um ID como no Path da requisição
-        [HttpDelete("v1/{id}")]
+        [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             _bookBusiness.Delete(id);

@@ -68,6 +68,8 @@ namespace RestWithASPNETUdemy
             })
             .AddXmlSerializerFormatters();
 
+			services.AddApiVersioning(option => option.ReportApiVersions = true);
+
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImpl>();
             services.AddScoped<IBookBusiness, BookBusinessImpl>();
