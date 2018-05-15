@@ -12,6 +12,8 @@ using RestWithASPNETUdemy.Model.Context;
 using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Business.Implementattions;
 using RestWithASPNETUdemy.Repository.Generic;
+using HyperMedia;
+using RestWithASPNETUdemy.HyperMedia;
 using Microsoft.Net.Http.Headers;
 
 namespace RestWithASPNETUdemy
@@ -58,7 +60,6 @@ namespace RestWithASPNETUdemy
                 }
             }
 
-            //SEE More Details in:  https://blog.jeremylikness.com/5-rest-api-designs-in-dot-net-core-1-29a8527e999chttps://blog.jeremylikness.com/5-rest-api-designs-in-dot-net-core-1-29a8527e999c
             services.AddMvc(options =>
             {
                 options.RespectBrowserAcceptHeader = true;
@@ -67,6 +68,12 @@ namespace RestWithASPNETUdemy
 
             })
             .AddXmlSerializerFormatters();
+
+            var filtertOptions = new HyperMediaFilterOptions();
+            filtertOptions.ObjectContentResponseEnricherList.Add(new PersonEnricher());
+            services.AddSingleton(filtertOptions);
+
+            services.AddApiVersioning(option => option.ReportApiVersions = true);
 
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImpl>();
@@ -84,8 +91,15 @@ namespace RestWithASPNETUdemy
         {
             loggerFactory.AddConsole(_configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+            
 
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "DefaultApi",
+                    template: "{controller=Values}/{id?}");
+            });
+
         }
     }
 }
