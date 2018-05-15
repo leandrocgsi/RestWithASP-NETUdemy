@@ -58,6 +58,8 @@ namespace RestWithASPNETUdemy
 
             services.AddMvc();
 
+			services.AddApiVersioning(option => option.ReportApiVersions = true);
+
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImpl>();
             services.AddScoped<IPersonRepository, PersonRepositoryImpl>();
