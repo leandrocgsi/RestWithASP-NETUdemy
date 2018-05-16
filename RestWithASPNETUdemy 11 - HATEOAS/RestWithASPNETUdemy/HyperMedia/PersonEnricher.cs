@@ -45,10 +45,5 @@ namespace RestWithASPNETUdemy.HyperMedia
             });
             return null;
         }
-
-        protected override Task EnrichModel(OkObjectResult okObjectResult, IUrlHelper urlHelper)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }
