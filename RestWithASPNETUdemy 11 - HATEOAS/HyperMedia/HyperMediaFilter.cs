@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -28,14 +29,14 @@ namespace HyperMedia
 
             if (result is OkObjectResult okObjectResult)
             {
-                if (okObjectResult.Value is ISupportsHyperMedia model)
-                {
+                /*if (okObjectResult.Value is ISupportsHyperMedia model)
+                {*/
                     var enricher = _hyperMediaFilterOptions.ObjectContentResponseEnricherList.FirstOrDefault(x => x.CanEnrich(context));
                     if (enricher != null) Task.FromResult(enricher.Enrich(context));
-                }
-                else if (IsCollectionType(result.GetType()))
+                /*} else
                 {
-                    IList collection = (IList) result;
+                    var o = okObjectResult as OkObjectResult;
+                    List<Object> collection = o.Value as List<Object>;
                     foreach (object element in collection)
                     {
                         if (element is ISupportsHyperMedia item)
@@ -44,7 +45,8 @@ namespace HyperMedia
                             if (enricher != null) Task.FromResult(enricher.Enrich(context));
                         }
                     }
-                }
+                }*/
+                
             }
         }
 

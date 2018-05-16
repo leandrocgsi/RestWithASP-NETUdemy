@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.Routing;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace HyperMedia
@@ -23,10 +24,12 @@ namespace HyperMedia
         /// <returns></returns>
         public virtual bool CanEnrich(Type contentType)
         {
-            return contentType == typeof(T);
+            return true;//contentType == typeof(T);
         }
 
         protected abstract Task EnrichModel(T content, IUrlHelper urlHelper);
+
+        protected abstract Task EnrichModel(OkObjectResult okObjectResult, IUrlHelper urlHelper);
 
         bool IResponseEnricher.CanEnrich(ResultExecutingContext response)
         {
@@ -42,8 +45,18 @@ namespace HyperMedia
             //var UrlHelper2 = new UrlHelper(response);
             if (response.Result is OkObjectResult okObjectResult)
                 if (okObjectResult.Value is T model)
+                {
                     await EnrichModel(model, urlHelper);
+                }
+                else if (okObjectResult.Value is List<T> collection)
+                {
+                    foreach(object element in collection)
+                    {
+                        await EnrichModel((T)element, urlHelper);
+                    }
+                }
             await Task.FromResult<object>(null);
         }
+
     }
 }
