@@ -70,7 +70,8 @@ namespace RestWithASPNETUdemy
             .AddXmlSerializerFormatters();
 
             var filtertOptions = new HyperMediaFilterOptions();
-            filtertOptions.ObjectContentResponseEnricherList.Add(new PersonEnricher());
+            filtertOptions.ObjectContentResponseEnricherList.Add(new BookEnricher());
+			filtertOptions.ObjectContentResponseEnricherList.Add(new PersonEnricher());
             services.AddSingleton(filtertOptions);
 
             services.AddApiVersioning(option => option.ReportApiVersions = true);

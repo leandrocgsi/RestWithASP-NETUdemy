@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using HyperMedia;
+using Microsoft.AspNetCore.Mvc;
 
 using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Data.VO;
@@ -28,6 +29,7 @@ namespace RestWithASPNETUdemy.Controllers
         //Mapeia as requisições GET para http://localhost:{porta}/api/books/v1/
         //Get sem parâmetros para o FindAll --> Busca Todos
         [HttpGet]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get()
         {
             return Ok(_bookBusiness.FindAll());
@@ -37,6 +39,7 @@ namespace RestWithASPNETUdemy.Controllers
         //recebendo um ID como no Path da requisição
         //Get com parâmetros para o FindById --> Busca Por ID
         [HttpGet("{id}")]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get(long id)
         {
             var book = _bookBusiness.FindById(id);
@@ -47,6 +50,7 @@ namespace RestWithASPNETUdemy.Controllers
         //Mapeia as requisições POST para http://localhost:{porta}/api/books/v1/
         //O [FromBody] consome o Objeto JSON enviado no corpo da requisição
         [HttpPost]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Post([FromBody]BookVO book)
         {
             if (book == null) return BadRequest();
@@ -56,6 +60,7 @@ namespace RestWithASPNETUdemy.Controllers
         //Mapeia as requisições PUT para http://localhost:{porta}/api/books/v1/
         //O [FromBody] consome o Objeto JSON enviado no corpo da requisição
         [HttpPut]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Put([FromBody]BookVO book)
         {
             if (book == null) return BadRequest();
@@ -68,6 +73,7 @@ namespace RestWithASPNETUdemy.Controllers
         //Mapeia as requisições DELETE para http://localhost:{porta}/api/books/v1/{id}
         //recebendo um ID como no Path da requisição
         [HttpDelete("{id}")]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Delete(int id)
         {
             _bookBusiness.Delete(id);
