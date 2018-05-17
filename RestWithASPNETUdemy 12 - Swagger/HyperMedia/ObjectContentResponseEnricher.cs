@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.Routing;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace HyperMedia
@@ -23,7 +25,7 @@ namespace HyperMedia
         /// <returns></returns>
         public virtual bool CanEnrich(Type contentType)
         {
-            return contentType == typeof(T);
+            return contentType == typeof(T) || contentType == typeof(List<T>);
         }
 
         protected abstract Task EnrichModel(T content, IUrlHelper urlHelper);
@@ -31,19 +33,30 @@ namespace HyperMedia
         bool IResponseEnricher.CanEnrich(ResultExecutingContext response)
         {
             if (response.Result is OkObjectResult okObjectResult)
+            {
                 return CanEnrich(okObjectResult.Value.GetType());
+            }
             return false;
         }
 
         public async Task Enrich(ResultExecutingContext response)
         {
-            // Get the urlHelper
             var urlHelper = (new UrlHelperFactory()).GetUrlHelper(response);
-            //var UrlHelper2 = new UrlHelper(response);
+
             if (response.Result is OkObjectResult okObjectResult)
                 if (okObjectResult.Value is T model)
+                {
                     await EnrichModel(model, urlHelper);
+                }
+                else if (okObjectResult.Value is List<T> collection)
+                {
+                    Parallel.ForEach(collection.ToList(), (element) =>
+                    {
+                        EnrichModel(element, urlHelper);
+                    });
+                }
             await Task.FromResult<object>(null);
         }
+
     }
 }

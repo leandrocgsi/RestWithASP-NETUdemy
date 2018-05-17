@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using System;
-using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -24,33 +23,14 @@ namespace HyperMedia
 
         private void TryEnrichResult(ResultExecutingContext context)
         {
-            var result = context.Result;
-
-            if (result is OkObjectResult okObjectResult)
+            if (context.Result is OkObjectResult okObjectResult)
             {
-                if (okObjectResult.Value is ISupportsHyperMedia model)
-                {
+                //if (okObjectResult.Value is ISupportsHyperMedia model) {
                     var enricher = _hyperMediaFilterOptions.ObjectContentResponseEnricherList.FirstOrDefault(x => x.CanEnrich(context));
-                    if (enricher != null) Task.FromResult(enricher.Enrich(context));
-                }
-                else if (IsCollectionType(result.GetType()))
-                {
-                    IList collection = (IList) result;
-                    foreach (object element in collection)
-                    {
-                        if (element is ISupportsHyperMedia item)
-                        {
-                            var enricher = _hyperMediaFilterOptions.ObjectContentResponseEnricherList.FirstOrDefault(x => x.CanEnrich(context));
-                            if (enricher != null) Task.FromResult(enricher.Enrich(context));
-                        }
-                    }
-                }
+                    if (enricher != null)
+                        Task.FromResult(enricher.Enrich(context));
+                //}
             }
-        }
-
-        bool IsCollectionType(Type type)
-        {
-            return (type.GetInterface(nameof(ICollection)) != null);
         }
     }
 }
