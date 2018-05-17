@@ -92,7 +92,7 @@ namespace RestWithASPNETUdemy
             loggerFactory.AddConsole(_configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
             
-
+            //%2F
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
