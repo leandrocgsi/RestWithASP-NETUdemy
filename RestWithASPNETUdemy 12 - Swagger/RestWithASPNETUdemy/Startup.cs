@@ -72,6 +72,7 @@ namespace RestWithASPNETUdemy
             .AddXmlSerializerFormatters();
 
             var filtertOptions = new HyperMediaFilterOptions();
+            filtertOptions.ObjectContentResponseEnricherList.Add(new BookEnricher());
             filtertOptions.ObjectContentResponseEnricherList.Add(new PersonEnricher());
             services.AddSingleton(filtertOptions);
 
