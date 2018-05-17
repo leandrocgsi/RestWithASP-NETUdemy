@@ -15,8 +15,8 @@ using RestWithASPNETUdemy.Repository.Generic;
 using HyperMedia;
 using RestWithASPNETUdemy.HyperMedia;
 using Microsoft.Net.Http.Headers;
-using Microsoft.AspNetCore.Rewrite;
 using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.AspNetCore.Rewrite;
 
 namespace RestWithASPNETUdemy
 {
@@ -77,12 +77,16 @@ namespace RestWithASPNETUdemy
 
             services.AddApiVersioning(option => option.ReportApiVersions = true);
 
-            // Register the Swagger generator, defining one or more Swagger documents
-            services.AddSwaggerGen(c =>
+            services.AddSwaggerGen(c => 
             {
-                c.SwaggerDoc("v1", new Info { Title = "My Simple RESTful API with ASP.NET Core", Version = "v1" });
-            });
+                c.SwaggerDoc("v1",
+                    new Info
+                    {
+                        Title = "RESTful API With ASP.NET Core 2.0",
+                        Version = "v1"
+                    });
 
+            });
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImpl>();
             services.AddScoped<IBookBusiness, BookBusinessImpl>();
@@ -99,7 +103,16 @@ namespace RestWithASPNETUdemy
         {
             loggerFactory.AddConsole(_configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-            
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
+
+            var option = new RewriteOptions();
+            option.AddRedirect("^$", "swagger");
+            app.UseRewriter(option);
 
             app.UseMvc(routes =>
             {
@@ -107,23 +120,6 @@ namespace RestWithASPNETUdemy
                     name: "DefaultApi",
                     template: "{controller=Values}/{id?}");
             });
-
-            // Habilita a disponiblilização pela API da documentação do Swagger como um endpoint JSON.
-            app.UseSwagger();
-
-            // Habilita a disponiblilização pela API pela disponibilização do swagger-ui contendo
-            // (HTML, JS, CSS, etc.), specificando o endpoint JSON do Swagger.
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-            });
-
-            // Define a página do Swagger como página inicial
-            // Caso não funcionar verificar se o arquivo
-            // launchSettings não está sobrescrevendo essa regra
-            var option = new RewriteOptions();
-            option.AddRedirect("^$", "swagger");
-            app.UseRewriter(option);
 
         }
     }
