@@ -32,7 +32,7 @@ namespace RestWithASPNETUdemy.Controllers
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get()
         {
-            return Ok(_bookBusiness.FindAll());
+            return new OkObjectResult(_bookBusiness.FindAll());
         }
 
         //Mapeia as requisições GET para http://localhost:{porta}/api/books/v1/{id}
@@ -44,7 +44,7 @@ namespace RestWithASPNETUdemy.Controllers
         {
             var book = _bookBusiness.FindById(id);
             if (book == null) return NotFound();
-            return Ok(book);
+            return new OkObjectResult(book);
         }
 
         //Mapeia as requisições POST para http://localhost:{porta}/api/books/v1/
@@ -54,7 +54,7 @@ namespace RestWithASPNETUdemy.Controllers
         public IActionResult Post([FromBody]BookVO book)
         {
             if (book == null) return BadRequest();
-            return new ObjectResult(_bookBusiness.Create(book));
+            return new OkObjectResult(_bookBusiness.Create(book));
         }
 
         //Mapeia as requisições PUT para http://localhost:{porta}/api/books/v1/
@@ -66,7 +66,7 @@ namespace RestWithASPNETUdemy.Controllers
             if (book == null) return BadRequest();
             var updatedBook = _bookBusiness.Update(book);
             if (updatedBook == null) return BadRequest();
-            return new ObjectResult(updatedBook);
+            return new OkObjectResult(updatedBook);
         }
 
 
