@@ -8,7 +8,6 @@ namespace RestWithASPNETUdemy.Business.Implementattions
 {
     public class BookBusinessImpl : IBookBusiness
     {
-
         private IRepository<Book> _repository;
 
         private readonly BookConverter _converter;
