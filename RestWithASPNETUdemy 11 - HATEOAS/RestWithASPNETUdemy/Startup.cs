@@ -12,7 +12,7 @@ using RestWithASPNETUdemy.Model.Context;
 using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Business.Implementattions;
 using RestWithASPNETUdemy.Repository.Generic;
-using HyperMedia;
+using Tapioca.HATEOAS;
 using RestWithASPNETUdemy.HyperMedia;
 using Microsoft.Net.Http.Headers;
 
@@ -69,10 +69,13 @@ namespace RestWithASPNETUdemy
             })
             .AddXmlSerializerFormatters();
 
-            var filtertOptions = new HyperMediaFilterOptions();
-            filtertOptions.ObjectContentResponseEnricherList.Add(new BookEnricher());
-			filtertOptions.ObjectContentResponseEnricherList.Add(new PersonEnricher());
-            services.AddSingleton(filtertOptions);
+            //Define as opções do filtro HATEOAS
+            var filterOptions = new HyperMediaFilterOptions();
+            filterOptions.ObjectContentResponseEnricherList.Add(new PersonEnricher());
+            filterOptions.ObjectContentResponseEnricherList.Add(new BookEnricher());
+
+            //Injeta o serviço
+            services.AddSingleton(filterOptions);
 
             services.AddApiVersioning(option => option.ReportApiVersions = true);
 
@@ -92,15 +95,12 @@ namespace RestWithASPNETUdemy
         {
             loggerFactory.AddConsole(_configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-            
-            //%2F
-            app.UseMvc(routes =>
-            {
+
+            app.UseMvc(routes => {
                 routes.MapRoute(
                     name: "DefaultApi",
-                    template: "{controller=Values}/{id?}");
+                    template:"{controller=Values}/{id?}");
             });
-
         }
     }
 }
