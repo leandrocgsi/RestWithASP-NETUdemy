@@ -1,4 +1,4 @@
-﻿using HyperMedia;
+﻿using Tapioca.HATEOAS;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RestWithASPNETUdemy.Business;

@@ -1,28 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using Microsoft.Extensions.Configuration;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.EntityFrameworkCore;
-
-using RestWithASPNETUdemy.Model.Context;
-using RestWithASPNETUdemy.Business;
-using RestWithASPNETUdemy.Business.Implementattions;
-using RestWithASPNETUdemy.Repository.Generic;
-using HyperMedia;
-using RestWithASPNETUdemy.HyperMedia;
-using Microsoft.Net.Http.Headers;
-using Swashbuckle.AspNetCore.Swagger;
-using Microsoft.AspNetCore.Rewrite;
-using RestWithASPNETUdemy.Services.Implementattions;
-using RestWithASPNETUdemy.Security.Configuration;
-using Microsoft.Extensions.Options;
-using System.Configuration;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Rewrite;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using Microsoft.Net.Http.Headers;
+
+using Swashbuckle.AspNetCore.Swagger;
+
+using Tapioca.HATEOAS;
+
+using RestWithASPNETUdemy.Business;
+using RestWithASPNETUdemy.Business.Implementattions;
+using RestWithASPNETUdemy.HyperMedia;
+using RestWithASPNETUdemy.Model.Context;
+using RestWithASPNETUdemy.Repository.Generic;
+using RestWithASPNETUdemy.Security.Configuration;
+using RestWithASPNETUdemy.Services.Implementattions;
 
 namespace RestWithASPNETUdemy
 {
