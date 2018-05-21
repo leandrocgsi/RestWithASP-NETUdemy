@@ -7,7 +7,7 @@
 		{
 			"id": "3b84c47a-00aa-9943-0b76-2f5e6ecc844e",
 			"name": "Books",
-			"description": "Folder for localhost:53683",
+			"description": "Folder for {{host}}:{{port}}",
 			"order": [
 				"cb4785a3-9e36-4ffb-b5be-c5488b0af8e9",
 				"51051512-5b51-2428-0765-c0b976cf31a8",
@@ -22,7 +22,7 @@
 		{
 			"id": "becef405-c63e-3c1c-0e40-69acbc2b14a3",
 			"name": "Files",
-			"description": "Folder for localhost:53683",
+			"description": "Folder for {{host}}:{{port}}",
 			"order": [
 				"16706dfa-70b4-9766-502f-345f2d4cd56d"
 			],
@@ -33,7 +33,7 @@
 		{
 			"id": "130e3de6-00d3-c9a6-056b-bdd7a9ecfa4f",
 			"name": "Login",
-			"description": "Folder for localhost:53683",
+			"description": "Folder for {{host}}:{{port}}",
 			"order": [
 				"1cbab14d-d756-a46a-3225-792c76cb123b"
 			],
@@ -44,7 +44,7 @@
 		{
 			"id": "25294243-8797-85e1-9d58-2c5bb36fe575",
 			"name": "Persons",
-			"description": "Folder for localhost:53683",
+			"description": "Folder for {{host}}:{{port}}",
 			"order": [
 				"6c82eaa9-18a3-4989-8fce-b8abd7b071b1",
 				"7e4c5ff6-5ba7-7004-d827-34af95e0f262",
@@ -84,7 +84,7 @@
 					"enabled": true
 				}
 			],
-			"url": "http://localhost:53683/api/files/v1",
+			"url": "http://{{host}}:{{port}}/api/files/v1",
 			"folder": "becef405-c63e-3c1c-0e40-69acbc2b14a3",
 			"queryParams": [],
 			"preRequestScript": "",
@@ -98,7 +98,7 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1526919652288,
-			"name": "localhost:53683/api/files/v1",
+			"name": "{{host}}:{{port}}/api/files/v1",
 			"description": "",
 			"collectionId": "d42f2cf6-a3d4-0a66-26ff-493bf17553bd",
 			"responses": []
@@ -120,7 +120,7 @@
 					"enabled": true
 				}
 			],
-			"url": "localhost:53683/api/login/v1",
+			"url": "{{host}}:{{port}}/api/login/v1",
 			"folder": "130e3de6-00d3-c9a6-056b-bdd7a9ecfa4f",
 			"queryParams": [],
 			"preRequestScript": "",
@@ -134,7 +134,7 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1526917191383,
-			"name": "localhost:53683/api/login/v1",
+			"name": "{{host}}:{{port}}/api/login/v1",
 			"description": "",
 			"collectionId": "d42f2cf6-a3d4-0a66-26ff-493bf17553bd",
 			"responses": [],
@@ -151,7 +151,7 @@
 					"enabled": true
 				}
 			],
-			"url": "localhost:53683/api/persons/v1/:id",
+			"url": "{{host}}:{{port}}/api/persons/v1/:id",
 			"folder": "25294243-8797-85e1-9d58-2c5bb36fe575",
 			"queryParams": [],
 			"preRequestScript": "",
@@ -173,7 +173,7 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1526919706194,
-			"name": "localhost:53683/api/persons/v1/:id",
+			"name": "{{host}}:{{port}}/api/persons/v1/:id",
 			"description": "",
 			"collectionId": "d42f2cf6-a3d4-0a66-26ff-493bf17553bd",
 			"responses": []
@@ -195,7 +195,7 @@
 					"enabled": true
 				}
 			],
-			"url": "localhost:53683/api/persons/v1/:id",
+			"url": "{{host}}:{{port}}/api/persons/v1/:id",
 			"folder": "25294243-8797-85e1-9d58-2c5bb36fe575",
 			"queryParams": [],
 			"preRequestScript": "",
@@ -217,7 +217,7 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1526919685865,
-			"name": "localhost:53683/api/persons/v1/:id",
+			"name": "{{host}}:{{port}}/api/persons/v1/:id",
 			"description": "",
 			"collectionId": "d42f2cf6-a3d4-0a66-26ff-493bf17553bd",
 			"responses": []
@@ -245,7 +245,7 @@
 					"enabled": true
 				}
 			],
-			"url": "localhost:53683/api/books/v1",
+			"url": "{{host}}:{{port}}/api/books/v1",
 			"folder": "3b84c47a-00aa-9943-0b76-2f5e6ecc844e",
 			"queryParams": [],
 			"preRequestScript": "",
@@ -259,7 +259,7 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1526919752071,
-			"name": "localhost:53683/api/books/v1",
+			"name": "{{host}}:{{port}}/api/books/v1",
 			"description": "",
 			"collectionId": "d42f2cf6-a3d4-0a66-26ff-493bf17553bd",
 			"responses": [],
@@ -282,7 +282,7 @@
 					"enabled": true
 				}
 			],
-			"url": "localhost:53683/api/books/v1/:id",
+			"url": "{{host}}:{{port}}/api/books/v1/:id",
 			"folder": "3b84c47a-00aa-9943-0b76-2f5e6ecc844e",
 			"queryParams": [],
 			"preRequestScript": "",
@@ -304,7 +304,7 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1526919771101,
-			"name": "localhost:53683/api/books/v1/:id",
+			"name": "{{host}}:{{port}}/api/books/v1/:id",
 			"description": "",
 			"collectionId": "d42f2cf6-a3d4-0a66-26ff-493bf17553bd",
 			"responses": []
@@ -326,7 +326,7 @@
 					"enabled": true
 				}
 			],
-			"url": "localhost:53683/api/persons/v1/1",
+			"url": "{{host}}:{{port}}/api/persons/v1/1",
 			"folder": "25294243-8797-85e1-9d58-2c5bb36fe575",
 			"queryParams": [],
 			"preRequestScript": "",
@@ -340,7 +340,7 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1526917262385,
-			"name": "localhost:53683/api/persons/v1",
+			"name": "{{host}}:{{port}}/api/persons/v1",
 			"description": "",
 			"collectionId": "d42f2cf6-a3d4-0a66-26ff-493bf17553bd",
 			"responses": [],
@@ -370,7 +370,7 @@
 					"enabled": true
 				}
 			],
-			"url": "localhost:53683/api/persons/v1",
+			"url": "{{host}}:{{port}}/api/persons/v1",
 			"folder": "25294243-8797-85e1-9d58-2c5bb36fe575",
 			"queryParams": [],
 			"preRequestScript": "",
@@ -384,7 +384,7 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1526918980051,
-			"name": "localhost:53683/api/persons/v1",
+			"name": "{{host}}:{{port}}/api/persons/v1",
 			"description": "",
 			"collectionId": "d42f2cf6-a3d4-0a66-26ff-493bf17553bd",
 			"responses": [],
@@ -413,7 +413,7 @@
 					"enabled": true
 				}
 			],
-			"url": "localhost:53683/api/books/v1",
+			"url": "{{host}}:{{port}}/api/books/v1",
 			"folder": "3b84c47a-00aa-9943-0b76-2f5e6ecc844e",
 			"queryParams": [],
 			"preRequestScript": "",
@@ -427,7 +427,7 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1526919761830,
-			"name": "localhost:53683/api/books/v1",
+			"name": "{{host}}:{{port}}/api/books/v1",
 			"description": "",
 			"collectionId": "d42f2cf6-a3d4-0a66-26ff-493bf17553bd",
 			"responses": [],
@@ -450,7 +450,7 @@
 					"enabled": true
 				}
 			],
-			"url": "localhost:53683/api/books/v1",
+			"url": "{{host}}:{{port}}/api/books/v1",
 			"folder": "3b84c47a-00aa-9943-0b76-2f5e6ecc844e",
 			"queryParams": [],
 			"preRequestScript": "",
@@ -464,7 +464,7 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1526919740368,
-			"name": "localhost:53683/api/books/v1",
+			"name": "{{host}}:{{port}}/api/books/v1",
 			"description": "",
 			"collectionId": "d42f2cf6-a3d4-0a66-26ff-493bf17553bd",
 			"responses": []
@@ -480,7 +480,7 @@
 					"enabled": true
 				}
 			],
-			"url": "localhost:53683/api/books/v1/:id",
+			"url": "{{host}}:{{port}}/api/books/v1/:id",
 			"folder": "3b84c47a-00aa-9943-0b76-2f5e6ecc844e",
 			"queryParams": [],
 			"preRequestScript": "",
@@ -502,7 +502,7 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1526919785694,
-			"name": "localhost:53683/api/books/v1/:id",
+			"name": "{{host}}:{{port}}/api/books/v1/:id",
 			"description": "",
 			"collectionId": "d42f2cf6-a3d4-0a66-26ff-493bf17553bd",
 			"responses": []
@@ -510,7 +510,7 @@
 		{
 			"id": "f54980b2-d63c-6f02-f2e5-58b5f099e8c3",
 			"headers": "Accept: text/plain, application/json, text/json, application/xml, text/xml\nContent-Type: application/json-patch+json\n",
-			"url": "localhost:53683/api/persons/v1",
+			"url": "{{host}}:{{port}}/api/persons/v1",
 			"pathVariables": {
 				"version": "{{version}}"
 			},
@@ -525,7 +525,7 @@
 			"responses": [],
 			"tests": "",
 			"collectionId": "d42f2cf6-a3d4-0a66-26ff-493bf17553bd",
-			"name": "localhost:53683/api/persons/v1",
+			"name": "{{host}}:{{port}}/api/persons/v1",
 			"collection_id": "d42f2cf6-a3d4-0a66-26ff-493bf17553bd",
 			"folder": "25294243-8797-85e1-9d58-2c5bb36fe575"
 		}
