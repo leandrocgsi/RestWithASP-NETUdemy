@@ -1,24 +1,20 @@
 ﻿using System;
-using Microsoft.AspNetCore.Mvc;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Principal;
 using Microsoft.IdentityModel.Tokens;
 using RestWithASPNETUdemy.Model;
 using RestWithASPNETUdemy.Security.Configuration;
-using RestWithASPNETUdemy.Business;
 
-namespace RestWithASPNETUdemy.Controllers
+namespace RestWithASPNETUdemy.Business.Implementattions
 {
-    [ApiVersion("1")]
-    [Route("api/[controller]/v{version:apiVersion}")]
-    public class LoginBusiness : ILoginBusiness
+    public class LoginBusinessImpl : ILoginBusiness
     {
         private IUserRepository _repository;
         private SigningConfigurations _signingConfigurations;
         private TokenConfigurations _tokenConfigurations;
 
-        public LoginBusiness(IUserRepository repository, SigningConfigurations signingConfigurations, TokenConfigurations tokenConfigurations)
+        public LoginBusinessImpl(IUserRepository repository, SigningConfigurations signingConfigurations, TokenConfigurations tokenConfigurations)
         {
             _repository = repository;
             _signingConfigurations = signingConfigurations;

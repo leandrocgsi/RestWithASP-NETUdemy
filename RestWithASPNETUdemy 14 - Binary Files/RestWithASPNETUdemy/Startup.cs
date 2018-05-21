@@ -152,9 +152,9 @@ namespace RestWithASPNETUdemy
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImpl>();
             services.AddScoped<IBookBusiness, BookBusinessImpl>();
-            services.AddScoped<ILoginBusiness, LoginBusiness>();
+            services.AddScoped<ILoginBusiness, LoginBusinessImpl>();
 
-            services.AddScoped<IFileBusiness, FileBusiness>();
+            services.AddScoped<IFileBusiness, FileBusinessImpl>();
 
             services.AddScoped<IUserRepository, UserRepositoryImpl>();
 
