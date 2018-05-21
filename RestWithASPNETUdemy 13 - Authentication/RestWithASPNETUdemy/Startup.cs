@@ -23,6 +23,8 @@ using RestWithASPNETUdemy.Security.Configuration;
 using Swashbuckle.AspNetCore.Swagger;
 
 using Tapioca.HATEOAS;
+using RestWithASPNETUdemy.Controllers;
+using RestWithASPNETUdemy.Services.Implementattions;
 
 namespace RestWithASPNETUdemy
 {
@@ -150,9 +152,9 @@ namespace RestWithASPNETUdemy
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImpl>();
             services.AddScoped<IBookBusiness, BookBusinessImpl>();
+            services.AddScoped<ILoginBusiness, LoginBusiness>();
 
-            // Não precisamos mais fazer dessa forma
-            //services.AddScoped<IPersonRepository, PersonRepositoryImpl>();
+            services.AddScoped<IUserRepository, UserRepositoryImpl>();
 
             //Dependency Injection of GenericRepository
             services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
