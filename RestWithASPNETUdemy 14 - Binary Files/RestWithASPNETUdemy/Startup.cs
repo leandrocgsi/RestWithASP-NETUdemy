@@ -154,6 +154,8 @@ namespace RestWithASPNETUdemy
             services.AddScoped<IBookBusiness, BookBusinessImpl>();
             services.AddScoped<ILoginBusiness, LoginBusiness>();
 
+            services.AddScoped<IFileBusiness, FileBusiness>();
+
             services.AddScoped<IUserRepository, UserRepositoryImpl>();
 
             //Dependency Injection of GenericRepository
