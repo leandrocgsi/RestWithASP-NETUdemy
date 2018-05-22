@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  restwithaspnetudemy:
+    image: ${DOCKER_REGISTRY}restwithaspnetudemy
+    build:
+      context: .
+      dockerfile: RestWithASPNETUdemy/Dockerfile
