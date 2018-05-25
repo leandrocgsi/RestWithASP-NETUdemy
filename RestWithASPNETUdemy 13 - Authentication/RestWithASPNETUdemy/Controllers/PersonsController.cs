@@ -1,10 +1,10 @@
 ﻿using Tapioca.HATEOAS;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Data.VO;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RestWithASPNETUdemy.Controllers
 {
@@ -73,6 +73,7 @@ namespace RestWithASPNETUdemy.Controllers
         [SwaggerResponse((201), Type = typeof(PersonVO))]
         [SwaggerResponse(400)]
         [SwaggerResponse(401)]
+        [Authorize("Bearer")]
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Post([FromBody]PersonVO person)
         {
@@ -88,6 +89,7 @@ namespace RestWithASPNETUdemy.Controllers
         [SwaggerResponse((202), Type = typeof(PersonVO))]
         [SwaggerResponse(400)]
         [SwaggerResponse(401)]
+        [Authorize("Bearer")]
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Put([FromBody]PersonVO person)
         {
@@ -105,6 +107,7 @@ namespace RestWithASPNETUdemy.Controllers
         [SwaggerResponse(400)]
         [SwaggerResponse(401)]
         [TypeFilter(typeof(HyperMediaFilter))]
+        [Authorize("Bearer")]
         public IActionResult Delete(int id)
         {
             _personBusiness.Delete(id);

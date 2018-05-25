@@ -1,13 +1,12 @@
 ﻿using RestWithASPNETUdemy.Model;
 using RestWithASPNETUdemy.Model.Context;
 using System.Linq;
-using RestWithASPNETUdemy.Business;
 
-namespace RestWithASPNETUdemy.Services.Implementattions
+namespace RestWithASPNETUdemy.Business.Implementattions
 {
     public class UserRepositoryImpl : IUserRepository
     {
-        private MySQLContext _context;
+        private readonly MySQLContext _context;
 
         public UserRepositoryImpl(MySQLContext context)
         {
@@ -16,7 +15,7 @@ namespace RestWithASPNETUdemy.Services.Implementattions
 
         public User FindByLogin(string login)
         {
-            return _context.Users.SingleOrDefault(p => p.Login.Equals(login));
+            return _context.Users.SingleOrDefault(u => u.Login.Equals(login));
         }
     }
 }
