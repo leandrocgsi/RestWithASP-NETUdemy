@@ -4,6 +4,7 @@ using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Data.VO;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RestWithASPNETUdemy.Controllers
 {
@@ -37,6 +38,7 @@ namespace RestWithASPNETUdemy.Controllers
         [SwaggerResponse(204)]
         [SwaggerResponse(400)]
         [SwaggerResponse(401)]
+        [Authorize("Bearer")]
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get()
         {
@@ -53,6 +55,7 @@ namespace RestWithASPNETUdemy.Controllers
         [SwaggerResponse(204)]
         [SwaggerResponse(400)]
         [SwaggerResponse(401)]
+        [Authorize("Bearer")]
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get(long id)
         {
@@ -70,6 +73,7 @@ namespace RestWithASPNETUdemy.Controllers
         [SwaggerResponse((201), Type = typeof(BookVO))]
         [SwaggerResponse(400)]
         [SwaggerResponse(401)]
+        [Authorize("Bearer")]
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Post([FromBody]BookVO book)
         {
@@ -85,6 +89,7 @@ namespace RestWithASPNETUdemy.Controllers
         [SwaggerResponse((202), Type = typeof(BookVO))]
         [SwaggerResponse(400)]
         [SwaggerResponse(401)]
+        [Authorize("Bearer")]
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Put([FromBody]BookVO book)
         {
@@ -101,6 +106,7 @@ namespace RestWithASPNETUdemy.Controllers
         [SwaggerResponse(204)]
         [SwaggerResponse(400)]
         [SwaggerResponse(401)]
+        [Authorize("Bearer")]
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Delete(int id)
         {
