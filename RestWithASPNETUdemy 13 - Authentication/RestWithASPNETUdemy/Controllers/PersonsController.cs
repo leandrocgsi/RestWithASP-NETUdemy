@@ -99,6 +99,7 @@ namespace RestWithASPNETUdemy.Controllers
             return new OkObjectResult(updatedPerson);
         }
 
+
         // Configura o Swagger para a operação
         // http://localhost:{porta}/api/persons/v1/
         // determina o objeto de retorno em caso de sucesso Person
