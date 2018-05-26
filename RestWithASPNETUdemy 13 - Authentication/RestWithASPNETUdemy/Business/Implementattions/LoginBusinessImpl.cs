@@ -22,7 +22,7 @@ namespace RestWithASPNETUdemy.Business.Implementattions
             _tokenConfigurations = tokenConfiguration; 
         }
 
-        public object FindByLogin(User user)
+        public object FindByLogin(UserVO user)
         {
             bool credentialsIsValid = false;
             if (user != null && !string.IsNullOrWhiteSpace(user.Login))
