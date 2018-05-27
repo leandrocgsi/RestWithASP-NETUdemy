@@ -71,6 +71,16 @@ namespace RestWithASPNETUdemy.Repository.Generic
             return dataset.SingleOrDefault(p => p.Id.Equals(id));
         }
 
+        public List<T> FindWithPagedSearch(string query)
+        {
+            return dataset.FromSql<T>(query).ToList();
+        }
+        
+        public int GetCount(string query)
+        {
+            return dataset.FromSql<T>(query).Count();
+        }
+
         public T Update(T item)
         {
             if (!Exists(item.Id)) return null;
