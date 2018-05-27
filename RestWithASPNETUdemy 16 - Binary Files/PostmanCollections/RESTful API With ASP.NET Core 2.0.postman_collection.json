@@ -9,6 +9,7 @@
 	"folders_order": [
 		"41ff4a72-5f46-446b-ab12-f79247eda1b2",
 		"46b8527f-c0de-4bae-b1b8-c79032419d79",
+		"904a1e3b-809d-4930-a851-4bafda384772",
 		"679fae27-87f0-4142-a565-5e44f7b4ebf6"
 	],
 	"folders": [
@@ -26,6 +27,40 @@
 				"e623451f-c295-4970-b079-bd953e2eaaae",
 				"206fffca-0ccb-44c6-99ca-577df8ab33c9",
 				"6da15c2c-9d11-422e-a2c3-90471becbb39"
+			],
+			"folders_order": []
+		},
+		{
+			"id": "904a1e3b-809d-4930-a851-4bafda384772",
+			"name": "File",
+			"description": "Folder for {{host}}:{{port}}",
+			"auth": null,
+			"events": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8d08f888-f1c2-4e02-bbad-e63929ca562a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "acf23160-c8fd-445a-8e30-3d05f1dc616d",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"collection": "c95c0043-5a69-476f-91f5-c19a9495c1ce",
+			"folder": null,
+			"order": [
+				"0c6cf4e4-4a79-4c1a-a706-bc3e640057ca"
 			],
 			"folders_order": []
 		},
@@ -85,6 +120,56 @@
 		}
 	],
 	"requests": [
+		{
+			"id": "0c6cf4e4-4a79-4c1a-a706-bc3e640057ca",
+			"name": "{{host}}:{{port}}/api/file/v1",
+			"url": "{{host}}:{{port}}/api/file/v1",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "text/plain, application/json, text/json, application/xml, text/xml",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": ""
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{bearer_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b453584b-ceaf-48a9-9e95-f9d57de9dca5",
+						"type": "text/javascript",
+						"exec": [
+							"if(responseCode.code >= 200 && responseCode.code <= 299) {",
+							"    var jsonData = JSON.parse(responseBody);",
+							"",
+							"    postman.setEnvironmentVariable('bearer_token', jsonData.accessToken);",
+							"}"
+						]
+					}
+				}
+			],
+			"folder": "904a1e3b-809d-4930-a851-4bafda384772",
+			"rawModeData": "{\n\t\"login\": \"{{user}}\",\n\t\"accessKey\": \"{{password}}\"\n}",
+			"headers": "Accept: text/plain, application/json, text/json, application/xml, text/xml\nContent-Type: application/json\nAuthorization: Bearer {{bearer_token}}\n",
+			"pathVariables": {}
+		},
 		{
 			"id": "13b4a74e-6518-4c58-963e-d6a10d721130",
 			"name": "{{host}}:{{port}}/api/persons/v1/:id",
