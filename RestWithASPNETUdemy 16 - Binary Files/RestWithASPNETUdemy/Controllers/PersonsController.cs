@@ -1,10 +1,10 @@
 ﻿using Tapioca.HATEOAS;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Data.VO;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RestWithASPNETUdemy.Controllers
 {
@@ -46,6 +46,40 @@ namespace RestWithASPNETUdemy.Controllers
         }
 
         // Configura o Swagger para a operação
+        // http://localhost:{porta}/api/persons/v1/
+        // [SwaggerResponse((202), Type = typeof(List<Person>))]
+        // determina o objeto de retorno em caso de sucesso List<Person>
+        // O [SwaggerResponse(XYZ)] define os códigos de retorno 204, 400 e 401
+        [HttpGet("find-by-name")]
+        [SwaggerResponse((200), Type = typeof(List<PersonVO>))]
+        [SwaggerResponse(204)]
+        [SwaggerResponse(400)]
+        [SwaggerResponse(401)]
+        [Authorize("Bearer")]
+        [TypeFilter(typeof(HyperMediaFilter))]
+        public IActionResult GetByName([FromQuery] string firstName, [FromQuery] string lastName)
+        {
+            return new OkObjectResult(_personBusiness.FindByName(firstName, lastName));
+        }
+
+        // Configura o Swagger para a operação
+        // http://localhost:{porta}/api/persons/v1/
+        // [SwaggerResponse((202), Type = typeof(List<Person>))]
+        // determina o objeto de retorno em caso de sucesso List<Person>
+        // O [SwaggerResponse(XYZ)] define os códigos de retorno 204, 400 e 401
+        [HttpGet("find-with-paged-search/{sortDirection}/{pageSize}/{page}")]
+        [SwaggerResponse((200), Type = typeof(List<PersonVO>))]
+        [SwaggerResponse(204)]
+        [SwaggerResponse(400)]
+        [SwaggerResponse(401)]
+        [Authorize("Bearer")]
+        [TypeFilter(typeof(HyperMediaFilter))]
+        public IActionResult GetPagedSearch([FromQuery] string name, string sortDirection, int pageSize, int page)
+        {
+            return new OkObjectResult(_personBusiness.FindWithPagedSearch(name, sortDirection, pageSize, page));
+        }
+
+        // Configura o Swagger para a operação
         // http://localhost:{porta}/api/persons/v1/{id}
         // [SwaggerResponse((202), Type = typeof(Person))]
         // determina o objeto de retorno em caso de sucesso Person
@@ -73,6 +107,7 @@ namespace RestWithASPNETUdemy.Controllers
         [SwaggerResponse((201), Type = typeof(PersonVO))]
         [SwaggerResponse(400)]
         [SwaggerResponse(401)]
+        [Authorize("Bearer")]
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Post([FromBody]PersonVO person)
         {
@@ -88,8 +123,28 @@ namespace RestWithASPNETUdemy.Controllers
         [SwaggerResponse((202), Type = typeof(PersonVO))]
         [SwaggerResponse(400)]
         [SwaggerResponse(401)]
+        [Authorize("Bearer")]
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Put([FromBody]PersonVO person)
+        {
+            if (person == null) return BadRequest();
+            var updatedPerson = _personBusiness.Update(person);
+            if (updatedPerson == null) return BadRequest();
+            return new OkObjectResult(updatedPerson);
+        }
+
+
+        // Configura o Swagger para a operação
+        // http://localhost:{porta}/api/persons/v1/
+        // determina o objeto de retorno em caso de sucesso Person
+        // O [SwaggerResponse(XYZ)] define os códigos de retorno 400 e 401
+        [HttpPatch]
+        [SwaggerResponse((202), Type = typeof(PersonVO))]
+        [SwaggerResponse(400)]
+        [SwaggerResponse(401)]
+        [Authorize("Bearer")]
+        [TypeFilter(typeof(HyperMediaFilter))]
+        public IActionResult Patch([FromBody]PersonVO person)
         {
             if (person == null) return BadRequest();
             var updatedPerson = _personBusiness.Update(person);
@@ -105,6 +160,7 @@ namespace RestWithASPNETUdemy.Controllers
         [SwaggerResponse(400)]
         [SwaggerResponse(401)]
         [TypeFilter(typeof(HyperMediaFilter))]
+        [Authorize("Bearer")]
         public IActionResult Delete(int id)
         {
             _personBusiness.Delete(id);

@@ -1,22 +1,29 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
 using RestWithASPNETUdemy.Business;
+using Microsoft.AspNetCore.Authorization;
+using RestWithASPNETUdemy.Model;
+using System;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace RestWithASPNETUdemy.Controllers
 {
     [ApiVersion("1")]
     [Route("api/[controller]/v{version:apiVersion}")]
-    public class FilesController : Controller
+    public class FileController : Controller
     {
         private IFileBusiness _fileBusiness;
 
-        public FilesController(IFileBusiness fileBusiness)
+        public FileController(IFileBusiness fileBusiness)
         {
             _fileBusiness = fileBusiness;
         }
 
-        [AllowAnonymous]
         [HttpGet]
+        [SwaggerResponse((200), Type = typeof(byte []))]
+        [SwaggerResponse(204)]
+        [SwaggerResponse(400)]
+        [SwaggerResponse(401)]
+        [Authorize("Bearer")]
         public IActionResult GetPDFFile()
         {
             byte[] buffer = _fileBusiness.GetPDFFile();
@@ -28,5 +35,7 @@ namespace RestWithASPNETUdemy.Controllers
             }
             return new ContentResult();
         }
+
+      
     }
 }

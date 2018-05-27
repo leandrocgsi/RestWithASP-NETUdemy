@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Tapioca.HATEOAS;
+using Microsoft.AspNetCore.Mvc;
 using RestWithASPNETUdemy.Data.VO;
 using System.Threading.Tasks;
-using Tapioca.HATEOAS;
 
 namespace RestWithASPNETUdemy.HyperMedia
 {

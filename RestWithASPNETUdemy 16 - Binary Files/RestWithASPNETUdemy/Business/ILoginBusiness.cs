@@ -4,6 +4,6 @@ namespace RestWithASPNETUdemy.Business
 {
     public interface ILoginBusiness
     {
-        object FindByLogin(User user);
+         object FindByLogin(UserVO user);
     }
 }

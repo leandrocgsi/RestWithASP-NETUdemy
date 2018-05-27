@@ -13,7 +13,7 @@ namespace RestWithASPNETUdemy.Repository.Generic
     public class GenericRepository<T> : IRepository<T> where T : BaseEntity
     {
 
-        private readonly MySQLContext _context;
+        protected readonly MySQLContext _context;
 
         // Declaração de um dataset genérico
         private DbSet<T> dataset;
@@ -69,6 +69,16 @@ namespace RestWithASPNETUdemy.Repository.Generic
         public T FindById(long id)
         {
             return dataset.SingleOrDefault(p => p.Id.Equals(id));
+        }
+
+        public List<T> FindWithPagedSearch(string query)
+        {
+            return dataset.FromSql<T>(query).ToList();
+        }
+        
+        public int GetCount(string query)
+        {
+            return dataset.FromSql<T>(query).Count();
         }
 
         public T Update(T item)

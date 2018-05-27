@@ -3,17 +3,18 @@ using RestWithASPNETUdemy.Model;
 using RestWithASPNETUdemy.Repository.Generic;
 using RestWithASPNETUdemy.Data.Converters;
 using RestWithASPNETUdemy.Data.VO;
+using Tapioca.HATEOAS.Utils;
 
 namespace RestWithASPNETUdemy.Business.Implementattions
 {
     public class PersonBusinessImpl : IPersonBusiness
     {
 
-        private IRepository<Person> _repository;
+        private IPersonRepository _repository;
 
         private readonly PersonConverter _converter;
 
-        public PersonBusinessImpl(IRepository<Person> repository)
+        public PersonBusinessImpl(IPersonRepository repository)
         {
             _repository = repository;
             _converter = new PersonConverter();
@@ -36,6 +37,11 @@ namespace RestWithASPNETUdemy.Business.Implementattions
             return _converter.ParseList(_repository.FindAll());
         }
 
+        public List<PersonVO> FindByName(string firstName, string lastName)
+        {
+            return _converter.ParseList(_repository.FindByName(firstName, lastName));
+        }
+
         public PersonVO Update(PersonVO person)
         {
             var personEntity = _converter.Parse(person);
@@ -48,6 +54,29 @@ namespace RestWithASPNETUdemy.Business.Implementattions
             _repository.Delete(id);
         }
 
+        public PagedSearchDTO<PersonVO> FindWithPagedSearch(string name, string sortDirection, int pageSize, int page)
+        {
+            string query = @"select * from Persons p where 1 = 1 ";
+            if (!string.IsNullOrEmpty(name)) query = query + $" and p.firstName like '%{name}%'";
+            
+            query = query + $" order by p.firstName {sortDirection} limit {pageSize} offset {page}";
+
+            string countQuery = @"select count(*) from Persons p where 1 = 1 ";
+            if (!string.IsNullOrEmpty(name)) countQuery = countQuery + $" and p.firstName like '%{name}%'";
+
+            var persons = _repository.FindWithPagedSearch(query);
+
+            int totalResults = _repository.GetCount(countQuery);
+
+            return new PagedSearchDTO<PersonVO>
+            {
+                CurrentPage = page,
+                List = _converter.ParseList(persons),
+                PageSize = pageSize,
+                SortDirections = sortDirection,
+                TotalResults = totalResults
+            };
+        }
         public bool Exists(long id)
         {
             return _repository.Exists(id);

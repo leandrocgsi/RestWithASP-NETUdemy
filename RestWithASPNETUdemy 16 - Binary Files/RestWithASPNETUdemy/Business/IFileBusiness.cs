@@ -1,7 +1,9 @@
-﻿namespace RestWithASPNETUdemy.Business
+﻿using RestWithASPNETUdemy.Model;
+
+namespace RestWithASPNETUdemy.Business
 {
     public interface IFileBusiness
     {
-        byte[] GetPDFFile();
+         byte[] GetPDFFile();
     }
 }

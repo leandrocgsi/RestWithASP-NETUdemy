@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RestWithASPNETUdemy.Business;
 using Microsoft.AspNetCore.Authorization;
 using RestWithASPNETUdemy.Model;
-using RestWithASPNETUdemy.Business;
 
 namespace RestWithASPNETUdemy.Controllers
 {
@@ -18,9 +18,12 @@ namespace RestWithASPNETUdemy.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public object Post([FromBody]User user)
+        public object Post([FromBody]UserVO user)
         {
+            if (user == null) return BadRequest();
             return _loginBusiness.FindByLogin(user);
         }
+
+      
     }
 }

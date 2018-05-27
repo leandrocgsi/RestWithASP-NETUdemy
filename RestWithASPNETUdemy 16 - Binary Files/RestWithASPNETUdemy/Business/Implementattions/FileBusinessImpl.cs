@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using RestWithASPNETUdemy.Model;
+using System.IO;
 
 namespace RestWithASPNETUdemy.Business.Implementattions
 {
@@ -7,9 +8,8 @@ namespace RestWithASPNETUdemy.Business.Implementattions
         public byte[] GetPDFFile()
         {
             string path = Directory.GetCurrentDirectory();
-            var fullPath = path + "\\Other\\aspnet-life-cycles-events.pdf";
-            byte[] bytes = File.ReadAllBytes(fullPath);
-            return bytes;
+            var fulPath = path + "\\Other\\aspnet-life-cycles-events.pdf";
+            return File.ReadAllBytes(fulPath);
         }
     }
 }
