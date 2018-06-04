@@ -1,8 +1,38 @@
 version: '3.4'
 
 services:
+  db:
+    image: mysql
+    restart: always
+    container_name: restwithaspnetudemy-db
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=user
+      - MYSQL_ROOT_PASSWORD=user
+      - MYSQL_DATABASE=rest_with_asp_net_udemy
+      - MYSQL_ROOT_HOST="172.17.0.1"
+    ports:
+      - "3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: restwithaspnetudemy-pma
+    ports:
+      - "81:80"
+    external_links:
+      - db:mysql
+    environment:
+      PMA_HOST: "db"
+      PMA_PORT: 3306
+
   restwithaspnetudemy:
-    image: ${DOCKER_REGISTRY}restwithaspnetudemy
+    image: restwithaspnetudemy-api
     build:
       context: .
       dockerfile: RestWithASPNETUdemy/Dockerfile
+    ports:
+      - "5000:80"
+    links:
+      - db
+    depends_on:
+      - db
