@@ -48,7 +48,7 @@ namespace RestWithASPNETUdemy
             services.AddDbContext<MySQLContext>(options => options.UseMySql(connectionString));
 
             //Adding Migrations Support
-            ExecuteMigrations(connectionString);
+            //ExecuteMigrations(connectionString);
 
             var signingConfigurations = new SigningConfigurations();
             services.AddSingleton(signingConfigurations);
