@@ -3,9 +3,7 @@ version: '3.4'
 services:
   db:
     image: mysql
-    command:  >
-      bash -c "mysqld --default-authentication-plugin=mysql_native_password
-      && --init-file /home/RestWithASPNETUdemy/db/migrations/V1_0_1__Create_Table_Persons.sql"
+    command: mysqld --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
       MYSQL_USER: root
@@ -13,6 +11,8 @@ services:
       MYSQL_DATABASE: rest_with_asp_net_udemy
     ports:
       - "3306:3306"
+    networks:
+      - udemy-network
 
   restwithaspnetudemy:
     image: restwithaspnetudemy-api
@@ -30,3 +30,9 @@ services:
       - db
     depends_on:
       - db
+    networks:
+      - udemy-network
+
+networks: 
+    udemy-network:
+        driver: bridge

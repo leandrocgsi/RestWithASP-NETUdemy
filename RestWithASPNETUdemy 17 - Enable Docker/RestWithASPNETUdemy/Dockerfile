@@ -4,14 +4,15 @@ EXPOSE 80
 
 FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /src
+COPY *.sln ./
 COPY RestWithASPNETUdemy/RestWithASPNETUdemy.csproj RestWithASPNETUdemy/
-RUN dotnet restore RestWithASPNETUdemy/RestWithASPNETUdemy.csproj
+RUN dotnet restore
 COPY . .
 WORKDIR /src/RestWithASPNETUdemy
-RUN dotnet build RestWithASPNETUdemy.csproj -c Release -o /app
+RUN dotnet build -c Release -o /app
 
 FROM build AS publish
-RUN dotnet publish RestWithASPNETUdemy.csproj -c Release -o /app
+RUN dotnet publish -c Release -o /app
 
 FROM base AS final
 WORKDIR /app
