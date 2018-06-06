@@ -49,7 +49,7 @@ namespace RestWithASPNETUdemy
             services.AddDbContext<MySQLContext>(options => options.UseMySql(connectionString));
 
             //Adding Migrations Support
-            //ExecuteMigrations(connectionString);
+            ExecuteMigrations(connectionString);
 
             var signingConfigurations = new SigningConfigurations();
             services.AddSingleton(signingConfigurations);
@@ -149,13 +149,13 @@ namespace RestWithASPNETUdemy
                 {
                     var evolveConnection = new MySql.Data.MySqlClient.MySqlConnection(connectionString);
 
-                    /*var evolve = new Evolve.Evolve(Directory.GetCurrentDirectory() + "/db/Evolve.json", evolveConnection, msg => _logger.LogInformation(Directory.GetCurrentDirectory() + "\n" + msg))
+                    var evolve = new Evolve.Evolve(Directory.GetCurrentDirectory() + "/db/Evolve.json", evolveConnection, msg => _logger.LogInformation(Directory.GetCurrentDirectory() + "\n" + msg))
                     {
                         Locations = new List<string> { "db/migrations" },
                         IsEraseDisabled = true,
                     };
 
-                    evolve.Migrate();*/
+                    evolve.Migrate();
 
                 }
                 catch (Exception ex)
