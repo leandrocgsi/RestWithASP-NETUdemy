@@ -1,5 +1,7 @@
 FROM mysql:5.7.22
 EXPOSE 3306
+# COPY ./RestWithASPNETUdemy/db/migrations/ /docker-entrypoint-initdb.d/
+# COPY ./RestWithASPNETUdemy/db/dataset/ /docker-entrypoint-initdb.d/
 COPY DBBackup/backup.sql /docker-entrypoint-initdb.d/backup.sql
 # COPY RestWithASPNETUdemy/db/migrations/V1_0_1__Create_Table_Persons.sql /docker-entrypoint-initdb.d/V1_0_1__Create_Table_Persons.sql
 # COPY RestWithASPNETUdemy/db/migrations/V1_0_2__Alter_Table_Persons.sql /docker-entrypoint-initdb.d/V1_0_2__Alter_Table_Persons.sql
