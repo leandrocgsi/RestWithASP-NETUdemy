@@ -8,6 +8,8 @@ services:
     environment:
       MYSQL_USER: root
       MYSQL_ROOT_PASSWORD: user
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
       MYSQL_DATABASE: rest_with_asp_net_udemy
     ports:
       - "3306:3306"
