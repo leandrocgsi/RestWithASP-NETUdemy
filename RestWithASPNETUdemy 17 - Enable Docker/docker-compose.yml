@@ -2,9 +2,12 @@ version: '3.4'
 
 services:
   db:
-    image: mysql:5.7.22
+    image: udemy-mysql
     command: mysqld --default-authentication-plugin=mysql_native_password
     restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile    
     environment:
       MYSQL_USER: root
       MYSQL_ROOT_PASSWORD: user
