@@ -23,7 +23,6 @@ using RestWithASPNETUdemy.Security.Configuration;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
-using System.IO;
 
 namespace RestWithASPNETUdemy
 {
@@ -149,7 +148,7 @@ namespace RestWithASPNETUdemy
                 {
                     var evolveConnection = new MySql.Data.MySqlClient.MySqlConnection(connectionString);
 
-                    var evolve = new Evolve.Evolve(Directory.GetCurrentDirectory() + "/db/Evolve.json", evolveConnection, msg => _logger.LogInformation(Directory.GetCurrentDirectory() + "\n" + msg))
+                    var evolve = new Evolve.Evolve("evolve.json", evolveConnection, msg => _logger.LogInformation(msg))
                     {
                         Locations = new List<string> { "db/migrations" },
                         IsEraseDisabled = true,
