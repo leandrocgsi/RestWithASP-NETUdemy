@@ -9,13 +9,12 @@ services:
       context: .
       dockerfile: Dockerfile    
     environment:
-      MYSQL_USER: root
-      MYSQL_ROOT_PASSWORD: user
-      MYSQL_USER: user
-      MYSQL_PASSWORD: user
+      MYSQL_ROOT_PASSWORD: docker
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
       MYSQL_DATABASE: rest_with_asp_net_udemy
     ports:
-      - "3306:3306"
+      - "3308:3306"
     networks:
       - udemy-network
 
@@ -26,11 +25,8 @@ services:
       dockerfile: RestWithASPNETUdemy/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Production
-      HOST: db
-      DB_USER: root
-      DB_PWD: user
     ports:
-      - "80"
+      - "5000:80"
     links:
       - db
     depends_on:
