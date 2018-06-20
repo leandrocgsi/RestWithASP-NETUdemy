@@ -78,7 +78,19 @@ namespace RestWithASPNETUdemy.Repository.Generic
         
         public int GetCount(string query)
         {
-            return dataset.FromSql<T>(query).Count();
+            var result = "";
+            using (var connection = _context.Database.GetDbConnection())
+            {
+                connection.Open();
+
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = query;
+                    result = command.ExecuteScalar().ToString();
+                }
+            }
+
+            return Int32.Parse(result);
         }
 
         public T Update(T item)
