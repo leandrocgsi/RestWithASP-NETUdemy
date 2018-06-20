@@ -15,20 +15,17 @@ namespace RestWithASPNETUdemy.Business.Implementattions
         {
             if(!string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(lastName))
             {
-                return _context.Persons.Where(p => p.FirstName.Equals(firstName) && p.LastName.Equals(lastName)).ToList();
+                return _context.Persons.Where(p => p.FirstName.Contains(firstName) && p.LastName.Contains(lastName)).ToList();
             }
             else if (string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(lastName))
             {
-                return _context.Persons.Where(p => p.LastName.Equals(lastName)).ToList();
+                return _context.Persons.Where(p => p.LastName.Contains(lastName)).ToList();
             }
             else if (!string.IsNullOrEmpty(firstName) && string.IsNullOrEmpty(lastName))
             {
-                return _context.Persons.Where(p => p.FirstName.Equals(firstName)).ToList();
+                return _context.Persons.Where(p => p.FirstName.Contains(firstName)).ToList();
             }
-            else
-            {
-                return _context.Persons.ToList();
-            }
+            return _context.Persons.ToList();
         }
     }
 }
