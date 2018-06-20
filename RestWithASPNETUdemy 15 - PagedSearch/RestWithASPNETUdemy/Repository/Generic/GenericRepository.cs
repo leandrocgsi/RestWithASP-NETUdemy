@@ -78,6 +78,7 @@ namespace RestWithASPNETUdemy.Repository.Generic
         
         public int GetCount(string query)
         {
+			// https://stackoverflow.com/questions/40557003/entity-framework-core-count-does-not-have-optimal-performance
             var result = "";
             using (var connection = _context.Database.GetDbConnection())
             {
