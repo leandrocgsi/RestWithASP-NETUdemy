@@ -56,6 +56,7 @@ namespace RestWithASPNETUdemy.Business.Implementattions
 
         public PagedSearchDTO<PersonVO> FindWithPagedSearch(string name, string sortDirection, int pageSize, int page)
         {
+            page = page > 0 ? page - 1 : 0;
             string query = @"select * from Persons p where 1 = 1 ";
             if (!string.IsNullOrEmpty(name)) query = query + $" and p.firstName like '%{name}%'";
             
@@ -70,7 +71,7 @@ namespace RestWithASPNETUdemy.Business.Implementattions
 
             return new PagedSearchDTO<PersonVO>
             {
-                CurrentPage = page,
+                CurrentPage = page + 1,
                 List = _converter.ParseList(persons),
                 PageSize = pageSize,
                 SortDirections = sortDirection,
