@@ -1,9 +1,8 @@
-﻿using System.Runtime.Serialization;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RestWithASPNETUdemy.Model
 {
-	[Table("users")]
+    [Table("users")]
     public class User
     {
 
