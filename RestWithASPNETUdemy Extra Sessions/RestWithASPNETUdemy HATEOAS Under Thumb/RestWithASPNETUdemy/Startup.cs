@@ -12,9 +12,10 @@ using RestWithASPNETUdemy.Model.Context;
 using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Business.Implementattions;
 using RestWithASPNETUdemy.Repository.Generic;
-using Tapioca.HATEOAS;
+using Hypermedia;
 using RestWithASPNETUdemy.HyperMedia;
 using Microsoft.Net.Http.Headers;
+using Hypermedia.Filters;
 
 namespace RestWithASPNETUdemy
 {

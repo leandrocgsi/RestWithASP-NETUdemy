@@ -1,4 +1,4 @@
-﻿using Tapioca.HATEOAS;
+﻿using Hypermedia.Filters;
 using Microsoft.AspNetCore.Mvc;
 using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Data.VO;

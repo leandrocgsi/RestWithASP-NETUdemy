@@ -1,4 +1,5 @@
-﻿using Tapioca.HATEOAS;
+﻿using Hypermedia;
+using Hypermedia.Abstract;
 using System.Collections.Generic;
 
 namespace RestWithASPNETUdemy.Data.VO

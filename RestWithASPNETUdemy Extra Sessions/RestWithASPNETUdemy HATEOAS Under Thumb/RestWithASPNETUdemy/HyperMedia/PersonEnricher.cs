@@ -1,4 +1,5 @@
-﻿using Tapioca.HATEOAS;
+﻿using Hypermedia;
+using Hypermedia.Constants;
 using Microsoft.AspNetCore.Mvc;
 using RestWithASPNETUdemy.Data.VO;
 using System.Threading.Tasks;
