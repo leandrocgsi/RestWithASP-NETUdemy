@@ -26,6 +26,10 @@
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hypermedia\Hypermedia.csproj" />
+  </ItemGroup>
     
   <Target Name="ChangeAliasesOfStrongNameAssemblies" BeforeTargets="FindReferenceAssembliesForReferences;ResolveReferences">
     <ItemGroup>
