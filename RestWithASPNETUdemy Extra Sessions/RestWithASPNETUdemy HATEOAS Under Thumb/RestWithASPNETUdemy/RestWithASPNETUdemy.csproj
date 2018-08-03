@@ -20,7 +20,6 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" />
     <PackageReference Include="MySql.Data" Version="8.0.11" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.0.1" />
-    <PackageReference Include="Tapioca.HATEOAS" Version="1.0.4" />
     
   </ItemGroup>
 
