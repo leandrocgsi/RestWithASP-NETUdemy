@@ -1,1 +1,1 @@
-Details
+Waiting for a quick description
