@@ -78,8 +78,9 @@ namespace RestWithASPNETUdemy.Controllers
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Post([FromBody]PersonVO person)
         {
-            string userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-
+            /* Obtém o id do usuário a partir disso basta fazermos
+            log, auditoria etc
+            */
             var userName = User.Identity.Name;
 
             if (person == null) return BadRequest();
