@@ -5,6 +5,7 @@ using RestWithASPNETUdemy.Data.VO;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace RestWithASPNETUdemy.Controllers
 {
@@ -77,6 +78,8 @@ namespace RestWithASPNETUdemy.Controllers
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Post([FromBody]PersonVO person)
         {
+            string userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
             if (person == null) return BadRequest();
             return new OkObjectResult(_personBusiness.Create(person));
         }
