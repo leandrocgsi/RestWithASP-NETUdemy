@@ -80,6 +80,8 @@ namespace RestWithASPNETUdemy.Controllers
         {
             string userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
+            var userName = User.Identity.Name;
+
             if (person == null) return BadRequest();
             return new OkObjectResult(_personBusiness.Create(person));
         }
