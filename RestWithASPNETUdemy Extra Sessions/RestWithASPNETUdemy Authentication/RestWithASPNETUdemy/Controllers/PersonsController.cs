@@ -13,21 +13,14 @@ namespace RestWithASPNETUdemy.Controllers
     [Route("api/[controller]/v{version:apiVersion}")]
     public class PersonsController : Controller
     {
-        //Declaração do serviço usado
+
         private IPersonBusiness _personBusiness;
 
-        /* Injeção de uma instancia de IPersonBusiness ao criar
-        uma instancia de PersonController */
         public PersonsController(IPersonBusiness personBusiness)
         {
             _personBusiness = personBusiness;
         }
 
-        // Configura o Swagger para a operação
-        // http://localhost:{porta}/api/persons/v1/
-        // [SwaggerResponse((202), Type = typeof(List<Person>))]
-        // determina o objeto de retorno em caso de sucesso List<Person>
-        // O [SwaggerResponse(XYZ)] define os códigos de retorno 204, 400 e 401
         [HttpGet]
         [SwaggerResponse((200), Type = typeof(List<PersonVO>))]
         [SwaggerResponse(204)]
