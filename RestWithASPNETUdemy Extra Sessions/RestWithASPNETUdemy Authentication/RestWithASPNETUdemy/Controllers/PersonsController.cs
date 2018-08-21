@@ -33,11 +33,6 @@ namespace RestWithASPNETUdemy.Controllers
             return new OkObjectResult(_personBusiness.FindAll());
         }
 
-        // Configura o Swagger para a operação
-        // http://localhost:{porta}/api/persons/v1/{id}
-        // [SwaggerResponse((202), Type = typeof(Person))]
-        // determina o objeto de retorno em caso de sucesso Person
-        // O [SwaggerResponse(XYZ)] define os códigos de retorno 204, 400 e 401
         [HttpGet("{id}")]
         [SwaggerResponse((200), Type = typeof(PersonVO))]
         [SwaggerResponse(204)]
@@ -52,11 +47,6 @@ namespace RestWithASPNETUdemy.Controllers
             return new OkObjectResult(person);
         }
 
-        // Configura o Swagger para a operação
-        // http://localhost:{porta}/api/
-        // [SwaggerResponse((202), Type = typeof(Person))]
-        // determina o objeto de retorno em caso de sucesso Person
-        // O [SwaggerResponse(XYZ)] define os códigos de retorno 400 e 401
         [HttpPost]
         [SwaggerResponse((201), Type = typeof(PersonVO))]
         [SwaggerResponse(400)]
