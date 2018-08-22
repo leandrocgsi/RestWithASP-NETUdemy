@@ -64,10 +64,6 @@ namespace RestWithASPNETUdemy.Controllers
             return new OkObjectResult(_personBusiness.Create(person));
         }
 
-        // Configura o Swagger para a operação
-        // http://localhost:{porta}/api/persons/v1/
-        // determina o objeto de retorno em caso de sucesso Person
-        // O [SwaggerResponse(XYZ)] define os códigos de retorno 400 e 401
         [HttpPut]
         [SwaggerResponse((202), Type = typeof(PersonVO))]
         [SwaggerResponse(400)]
@@ -82,9 +78,6 @@ namespace RestWithASPNETUdemy.Controllers
             return new OkObjectResult(updatedPerson);
         }
 
-        // Configura o Swagger para a operação
-        // http://localhost:{porta}/api/persons/v1/{id}
-        // O [SwaggerResponse(XYZ)] define os códigos de retorno 400 e 401
         [HttpDelete("{id}")]
         [SwaggerResponse(204)]
         [SwaggerResponse(400)]
