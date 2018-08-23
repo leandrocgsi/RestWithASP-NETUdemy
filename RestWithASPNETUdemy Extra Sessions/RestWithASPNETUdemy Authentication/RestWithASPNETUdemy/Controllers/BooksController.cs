@@ -9,20 +9,12 @@ using Microsoft.AspNetCore.Authorization;
 namespace RestWithASPNETUdemy.Controllers
 {
 
-    /* Mapeia as requisições de http://localhost:{porta}/api/books/v1/
-    Por padrão o ASP.NET Core mapeia todas as classes que extendem Controller
-    pegando a primeira parte do nome da classe em lower case [Book]Controller
-    e expõe como endpoint REST
-    */
     [ApiVersion("1")]
     [Route("api/[controller]/v{version:apiVersion}")]
     public class BooksController : Controller
     {
-        //Declaração do serviço usado
         private IBookBusiness _bookBusiness;
 
-        /* Injeção de uma instancia de IBookBusiness ao criar
-        uma instancia de BookController */
         public BooksController(IBookBusiness bookBusiness)
         {
             _bookBusiness = bookBusiness;
