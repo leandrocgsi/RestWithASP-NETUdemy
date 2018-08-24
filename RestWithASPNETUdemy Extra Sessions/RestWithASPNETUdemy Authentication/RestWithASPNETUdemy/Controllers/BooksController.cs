@@ -20,11 +20,6 @@ namespace RestWithASPNETUdemy.Controllers
             _bookBusiness = bookBusiness;
         }
 
-        // Configura o Swagger para a operação
-        // http://localhost:{porta}/api/books/v1/
-        // [SwaggerResponse((202), Type = typeof(List<Book>))]
-        // determina o objeto de retorno em caso de sucesso List<Book>
-        // O [SwaggerResponse(XYZ)] define os códigos de retorno 204, 400 e 401
         [HttpGet]
         [SwaggerResponse((200), Type = typeof(List<BookVO>))]
         [SwaggerResponse(204)]
@@ -37,11 +32,6 @@ namespace RestWithASPNETUdemy.Controllers
             return new OkObjectResult(_bookBusiness.FindAll());
         }
 
-        // Configura o Swagger para a operação
-        // http://localhost:{porta}/api/books/v1/{id}
-        // [SwaggerResponse((202), Type = typeof(Book))]
-        // determina o objeto de retorno em caso de sucesso Book
-        // O [SwaggerResponse(XYZ)] define os códigos de retorno 204, 400 e 401
         [HttpGet("{id}")]
         [SwaggerResponse((200), Type = typeof(BookVO))]
         [SwaggerResponse(204)]
