@@ -46,12 +46,7 @@ namespace RestWithASPNETUdemy.Controllers
             return new OkObjectResult(book);
         }
 
-        // Configura o Swagger para a operação
-        // http://localhost:{porta}/api/
-        // [SwaggerResponse((202), Type = typeof(Book))]
-        // determina o objeto de retorno em caso de sucesso Book
-        // O [SwaggerResponse(XYZ)] define os códigos de retorno 400 e 401
-        [HttpPost]
+		[HttpPost]
         [SwaggerResponse((201), Type = typeof(BookVO))]
         [SwaggerResponse(400)]
         [SwaggerResponse(401)]
