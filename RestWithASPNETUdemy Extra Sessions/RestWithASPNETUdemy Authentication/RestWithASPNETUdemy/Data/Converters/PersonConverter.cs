@@ -10,7 +10,7 @@ namespace RestWithASPNETUdemy.Data.Converters
     {
         public Person Parse(PersonVO origin)
         {
-            if (origin == null) return new Person();
+            if (origin == null) return null;
             return new Person
             {
                 Id = origin.Id,
@@ -23,7 +23,7 @@ namespace RestWithASPNETUdemy.Data.Converters
 
         public PersonVO Parse(Person origin)
         {
-            if (origin == null) return new PersonVO();
+            if (origin == null) return null;
             return new PersonVO
             {
                 Id = origin.Id,
