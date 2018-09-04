@@ -7,9 +7,6 @@ using System.Linq;
 
 namespace RestWithASPNETUdemy.Repository.Generic
 {
-    // A implementação do repositório genérico
-    // Recebe qualquer Tipo T que implemente IRepository de mesmo tipo
-    // Desde que T extenda BaseEntity
     public class GenericRepository<T> : IRepository<T> where T : BaseEntity
     {
 
