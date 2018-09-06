@@ -12,7 +12,6 @@ namespace RestWithASPNETUdemy.Repository.Generic
 
         private readonly MySQLContext _context;
 
-        // Declaração de um dataset genérico
         private DbSet<T> dataset;
 
         public GenericRepository(MySQLContext context)
