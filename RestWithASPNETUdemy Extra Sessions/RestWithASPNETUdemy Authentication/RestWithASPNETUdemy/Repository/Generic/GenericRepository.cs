@@ -20,7 +20,6 @@ namespace RestWithASPNETUdemy.Repository.Generic
             dataset = _context.Set<T>();
         }
 
-
         public T Create(T item)
         {
             try
