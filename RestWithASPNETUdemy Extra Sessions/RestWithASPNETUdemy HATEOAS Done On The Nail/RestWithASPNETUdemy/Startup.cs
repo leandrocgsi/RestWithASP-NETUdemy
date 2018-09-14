@@ -68,12 +68,10 @@ namespace RestWithASPNETUdemy
             })
             .AddXmlSerializerFormatters();
 
-            //Define as opções do filtro HATEOAS
             var filterOptions = new HyperMediaFilterOptions();
             filterOptions.ObjectContentResponseEnricherList.Add(new PersonEnricher());
             filterOptions.ObjectContentResponseEnricherList.Add(new BookEnricher());
 
-            //Injeta o serviço
             services.AddSingleton(filterOptions);
 
             services.AddApiVersioning(option => option.ReportApiVersions = true);
