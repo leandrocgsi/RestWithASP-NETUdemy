@@ -5,9 +5,9 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 [Download MySQL](https://dev.mysql.com/downloads/mysql/)
 [Download Heidi](https://www.heidisql.com/download.php)
 
-# HTTP Status Codes adopted by most world-famous API's
+# HTTP Status Codes adotados pelas mais famosas API's do mundo
 
-[Based In](https://gist.github.com/vkostyukov/32c84c0c01789425c29a#file-statuses-md)
+[Baseado em](https://gist.github.com/vkostyukov/32c84c0c01789425c29a#file-statuses-md)
 
 |API                   | Status Codes                                                                             |
 |----------------------|------------------------------------------------------------------------------------------|
