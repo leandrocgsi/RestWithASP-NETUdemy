@@ -26,17 +26,17 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 |[Uber][ub]            | 200, 201, 400, 401, 403, 404, 406, 409, 422, 429, 500                                    |
 
 
-Used by either **one of them**: 200, 201, 202, 204, 301, 302, 303, 304, 307, 308, 400, 401, 402, 403, 404, 405, 406, 408, 409, 410, 411, 412, 413, 416, 420, 422, 429, 500, 501, 502, 503, 504, 507
+Usado por **todos eles**: 200, 201, 202, 204, 301, 302, 303, 304, 307, 308, 400, 401, 402, 403, 404, 405, 406, 408, 409, 410, 411, 412, 413, 416, 420, 422, 429, 500, 501, 502, 503, 504, 507
 
-Used by at least **two of them**: 200, 201, 204, 301, 304, 307, 400, 401, 403, 404, 405, 406, 409, 420, 422, 429, 500, 502, 503, 504
+Usado por pelo menos **dois deles**: 200, 201, 204, 301, 304, 307, 400, 401, 403, 404, 405, 406, 409, 420, 422, 429, 500, 502, 503, 504
 
-Used by at least **three of them**: 200, 201, 304, 400, 401, 403, 404, 405, 422, 429, 500, 502, 503
+Usado por pelo menos **três deles**: 200, 201, 304, 400, 401, 403, 404, 405, 422, 429, 500, 502, 503
 
-Used by at least **four of them**: 200, 201, 304, 400, 401, 403, 404, 405, 429, 500, 502, 503
+Usado por pelo menos **quatro deles**: 200, 201, 304, 400, 401, 403, 404, 405, 429, 500, 502, 503
 
-Used by at least **five of them**: 200, 201, 400, 401, 403, 404, 405, 429, 500, 503
+Usado por pelo menos **cinco deles**: 200, 201, 400, 401, 403, 404, 405, 429, 500, 503
 
-Used by **all of them**: 200, 400
+Usado por pelo menos **todos eles**: 200, 400
 
 [tw]: https://dev.twitter.com/overview/api/response-codes
 [stripe]: https://stripe.com/docs/api#errors
