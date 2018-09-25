@@ -3,6 +3,7 @@
 Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's do 0 à Nuvem Com ASP.NET Core 2.0 e Docker](https://www.udemy.com/restful-apis-do-0-a-nuvem-com-aspnet-core-e-docker/?couponCode=GITHUB)
 
 [Download MySQL](https://dev.mysql.com/downloads/mysql/)
+
 [Download Heidi](https://www.heidisql.com/download.php)
 
 # HTTP Status Codes adotados pelas mais famosas API's do mundo
