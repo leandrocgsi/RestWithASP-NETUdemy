@@ -15,11 +15,7 @@ namespace RestWithASPNETUdemy.Business.Implementattions
             _context = context;
         }
 
-        // Metodo responsável por criar uma nova pessoa
-        // nesse momento adicionamos o objeto ao contexto
-        // e finalmente salvamos as mudanças no contexto
-        // na base de dados
-        public Person Create(Person person)
+		public Person Create(Person person)
         {
             try
             {
