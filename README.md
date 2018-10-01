@@ -53,4 +53,6 @@ Usado por pelo menos **todos eles**: 200, 400
 [pk]: https://getpocket.com/developer/docs/errors
 [ub]: https://developer.uber.com/v1/api-reference/
 
-SEE: https://github.com/stefanprodan/AspNetCoreRateLimit
+# Exemplos
+
+[Limitando a Quantidade de Requests](https://github.com/stefanprodan/AspNetCoreRateLimit)
