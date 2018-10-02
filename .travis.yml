@@ -3,6 +3,8 @@ dist: trusty
 sudo: required
 mono: none
 dotnet: 2.0.0
+install:
+  - dotnet restore
 script:
   - cd "/RestWithASPNETUdemy 01 - Calculator/"
   - echo "Entered /RestWithASPNETUdemy 01 - Calculator/."
