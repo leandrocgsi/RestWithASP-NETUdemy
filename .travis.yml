@@ -1,0 +1,11 @@
+language: csharp
+sudo: required
+dist: trusty
+mono: none
+dotnet: 2.0.0-preview2-006497
+before_script:
+  - dotnet restore
+script:
+  - cd "/RestWithASPNETUdemy 01 - Calculator/"
+  - echo "Entered /RestWithASPNETUdemy 01 - Calculator/."
+  - dotnet build
