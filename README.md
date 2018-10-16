@@ -8,6 +8,8 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 
 [Download Heidi](https://www.heidisql.com/download.php)
 
+[Download Docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)
+
 # HTTP Status Codes adotados pelas mais famosas API's do mundo
 
 [Baseado em](https://gist.github.com/vkostyukov/32c84c0c01789425c29a#file-statuses-md)
@@ -29,7 +31,7 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 |[Uber][ub]            | 200, 201, 400, 401, 403, 404, 406, 409, 422, 429, 500                                    |
 
 
-Usado por **todos eles**: 200, 201, 202, 204, 301, 302, 303, 304, 307, 308, 400, 401, 402, 403, 404, 405, 406, 408, 409, 410, 411, 412, 413, 416, 420, 422, 429, 500, 501, 502, 503, 504, 507
+Status codes **usados pela maioria deles**: 200, 201, 202, 204, 301, 302, 303, 304, 307, 308, 400, 401, 402, 403, 404, 405, 406, 408, 409, 410, 411, 412, 413, 416, 420, 422, 429, 500, 501, 502, 503, 504, 507
 
 Usado por pelo menos **dois deles**: 200, 201, 204, 301, 304, 307, 400, 401, 403, 404, 405, 406, 409, 420, 422, 429, 500, 502, 503, 504
 
