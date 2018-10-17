@@ -14,7 +14,7 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 
 [Docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)
 
-# HTTP Status Codes adotados pelas mais famosas API's do mundo
+# HTTP Status Codes adotados pelas API's mais famosas do mundo
 
 [Baseado em](https://gist.github.com/vkostyukov/32c84c0c01789425c29a#file-statuses-md)
 
