@@ -4,13 +4,15 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 
 [![Build Status](https://travis-ci.org/leandrocgsi/RestWithASP-NETUdemy.svg?branch=master)](https://travis-ci.org/leandrocgsi/RestWithASP-NETUdemy)
 
-[Download Visual Studio 2017 & Visual Studio Code](https://visualstudio.microsoft.com/pt-br/downloads/)
+# Links para baixar as ferramentas usadas no curso
 
-[Download MySQL](https://dev.mysql.com/downloads/mysql/)
+[Visual Studio 2017 & Visual Studio Code](https://visualstudio.microsoft.com/pt-br/downloads/)
 
-[Download Heidi](https://www.heidisql.com/download.php)
+[MySQL](https://dev.mysql.com/downloads/mysql/)
 
-[Download Docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)
+[Heidi](https://www.heidisql.com/download.php)
+
+[Docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)
 
 # HTTP Status Codes adotados pelas mais famosas API's do mundo
 
