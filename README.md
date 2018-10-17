@@ -4,6 +4,8 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 
 [![Build Status](https://travis-ci.org/leandrocgsi/RestWithASP-NETUdemy.svg?branch=master)](https://travis-ci.org/leandrocgsi/RestWithASP-NETUdemy)
 
+[Download Visual Studio 2017 & Visual Studio Code](https://visualstudio.microsoft.com/pt-br/downloads/)
+
 [Download MySQL](https://dev.mysql.com/downloads/mysql/)
 
 [Download Heidi](https://www.heidisql.com/download.php)
