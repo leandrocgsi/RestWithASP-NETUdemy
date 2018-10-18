@@ -12,6 +12,8 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 
 [Heidi](https://www.heidisql.com/download.php)
 
+[Postman](https://www.getpostman.com/apps)
+
 [Docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)
 
 # HTTP Status Codes adotados pelas API's mais famosas do mundo
