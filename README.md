@@ -6,15 +6,15 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 
 # Links para baixar as ferramentas usadas no curso
 
-[Visual Studio 2017 & Visual Studio Code](https://visualstudio.microsoft.com/pt-br/downloads/)
+* [Visual Studio 2017 & Visual Studio Code](https://visualstudio.microsoft.com/pt-br/downloads/)
 
-[MySQL](https://dev.mysql.com/downloads/mysql/)
+* [MySQL](https://dev.mysql.com/downloads/mysql/)
 
-[Heidi](https://www.heidisql.com/download.php)
+* [Heidi](https://www.heidisql.com/download.php)
 
-[Postman](https://www.getpostman.com/apps)
+* [Postman](https://www.getpostman.com/apps)
 
-[Docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)
+* [Docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)
 
 # HTTP Status Codes adotados pelas API's mais famosas do mundo
 
