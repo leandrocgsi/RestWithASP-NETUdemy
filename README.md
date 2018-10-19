@@ -8,6 +8,8 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 
 * [Visual Studio 2017 & Visual Studio Code](https://visualstudio.microsoft.com/pt-br/downloads/)
 
+* [GIT Bash](https://git-scm.com/downloads)
+
 * [MySQL](https://dev.mysql.com/downloads/mysql/)
 
 * [Heidi](https://www.heidisql.com/download.php)
