@@ -14,6 +14,8 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 
 * [Heidi](https://www.heidisql.com/download.php)
 
+* [MySQL Workbench](https://www.mysql.com/products/workbench/)
+
 * [Postman](https://www.getpostman.com/apps)
 
 * [Docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)
