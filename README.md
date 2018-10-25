@@ -22,6 +22,13 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 
 * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
+# Para saber mais
+
+* [Web Services](www.erudio.com.br/blog/web-services/)
+* [RESTful Web Services](www.erudio.com.br/blog/restful-web-services/)
+* [HTTP Status Codes em Serviços REST](www.erudio.com.br/blog/http-status-codes-em-servicos-rest/)
+* [Entendendo HATEOAS](www.erudio.com.br/blog/en/)
+
 # HTTP Status Codes adotados pelas API's mais famosas do mundo
 
 [Baseado em](https://gist.github.com/vkostyukov/32c84c0c01789425c29a#file-statuses-md)
