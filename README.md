@@ -29,6 +29,9 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 * [HTTP Status Codes em Serviços REST](www.erudio.com.br/blog/http-status-codes-em-servicos-rest/)
 * [Entendendo HATEOAS](www.erudio.com.br/blog/en/)
 
+* [Criando uma simples Web API RESTful em .NET Core 2.0](http://www.erudio.com.br/blog/criando-uma-simples-web-api-restful-em-net-core-2-0/)
+* [Criando um endpoint REST com ASP.NET Core](http://www.erudio.com.br/blog/criando-um-endpoint-rest-com-asp-net-core/)
+
 # HTTP Status Codes adotados pelas API's mais famosas do mundo
 
 [Baseado em](https://gist.github.com/vkostyukov/32c84c0c01789425c29a#file-statuses-md)
