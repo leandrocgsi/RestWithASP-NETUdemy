@@ -24,10 +24,14 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 
 # Para saber mais
 
+### Fundamentos Teóricos
+
 * [Web Services](www.erudio.com.br/blog/web-services/)
 * [RESTful Web Services](www.erudio.com.br/blog/restful-web-services/)
 * [HTTP Status Codes em Serviços REST](www.erudio.com.br/blog/http-status-codes-em-servicos-rest/)
 * [Entendendo HATEOAS](www.erudio.com.br/blog/en/)
+
+### Fundamentos Práticos
 
 * [Criando uma simples Web API RESTful em .NET Core 2.0](http://www.erudio.com.br/blog/criando-uma-simples-web-api-restful-em-net-core-2-0/)
 * [Criando um endpoint REST com ASP.NET Core](http://www.erudio.com.br/blog/criando-um-endpoint-rest-com-asp-net-core/)
