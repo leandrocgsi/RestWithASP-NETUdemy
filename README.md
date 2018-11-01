@@ -38,7 +38,7 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 
 # HTTP Status Codes adotados pelas API's mais famosas do mundo
 
-[Baseado em](https://gist.github.com/vkostyukov/32c84c0c01789425c29a#file-statuses-md)
+Esse tópico se baseia [nesse repositório aqui!](https://gist.github.com/vkostyukov/32c84c0c01789425c29a#file-statuses-md)
 
 |API                   | Status Codes                                                                             |
 |----------------------|------------------------------------------------------------------------------------------|
