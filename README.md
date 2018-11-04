@@ -6,6 +6,8 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 
 # Links para baixar as ferramentas usadas no curso
 
+### Windows
+
 * [Visual Studio 2017 & Visual Studio Code](https://visualstudio.microsoft.com/pt-br/downloads/)
 
 * [GIT Bash](https://git-scm.com/downloads)
@@ -21,6 +23,9 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 * [Docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)
 
 * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+
+### Linux
+
 
 # Para saber mais
 
