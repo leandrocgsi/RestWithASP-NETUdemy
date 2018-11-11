@@ -17,7 +17,6 @@ namespace RestWithASPNETUdemy.Controllers
         }
 
         [HttpGet]
-        //Add HyperMediaFilter
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get()
         {
@@ -25,7 +24,6 @@ namespace RestWithASPNETUdemy.Controllers
         }
 
         [HttpGet("{id}")]
-        //Add HyperMediaFilter
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get(long id)
         {
@@ -35,7 +33,6 @@ namespace RestWithASPNETUdemy.Controllers
         }
 
         [HttpPost]
-        //Add HyperMediaFilter
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Post([FromBody]PersonVO person)
         {
@@ -44,7 +41,6 @@ namespace RestWithASPNETUdemy.Controllers
         }
 
         [HttpPut]
-        //Add HyperMediaFilter
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Put([FromBody]PersonVO person)
         {
@@ -55,7 +51,6 @@ namespace RestWithASPNETUdemy.Controllers
         }
 
         [HttpDelete("{id}")]
-        //Add HyperMediaFilter
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Delete(int id)
         {
