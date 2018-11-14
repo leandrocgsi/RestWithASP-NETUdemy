@@ -5,9 +5,11 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestWithASPNETUdemy", "RestWithASPNETUdemy\RestWithASPNETUdemy.csproj", "{C6AB9C91-8E29-41D9-855B-06E799FA7D5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModel", "DomainModel\DomainModel.csproj", "{08B98BEE-742B-4E7A-914D-232DB885D664}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainModel", "DomainModel\DomainModel.csproj", "{08B98BEE-742B-4E7A-914D-232DB885D664}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessMySqlProvider", "DataAccessMySqlProvider\DataAccessMySqlProvider.csproj", "{2F0E97D6-BF96-47B7-BD1D-213CE695BBE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessMySqlProvider", "DataAccessMySqlProvider\DataAccessMySqlProvider.csproj", "{2F0E97D6-BF96-47B7-BD1D-213CE695BBE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessPostgreSqlProvider", "DataAccessPostgreSqlProvider\DataAccessPostgreSqlProvider.csproj", "{5F368E2C-4A7E-40E4-8810-74844CAECD72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{2F0E97D6-BF96-47B7-BD1D-213CE695BBE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F0E97D6-BF96-47B7-BD1D-213CE695BBE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F0E97D6-BF96-47B7-BD1D-213CE695BBE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F368E2C-4A7E-40E4-8810-74844CAECD72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F368E2C-4A7E-40E4-8810-74844CAECD72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F368E2C-4A7E-40E4-8810-74844CAECD72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F368E2C-4A7E-40E4-8810-74844CAECD72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
