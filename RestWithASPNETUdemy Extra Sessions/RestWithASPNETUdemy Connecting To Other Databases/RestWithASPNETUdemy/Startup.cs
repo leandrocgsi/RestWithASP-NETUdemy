@@ -7,8 +7,8 @@ using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Business.Implementattions;
 using Microsoft.EntityFrameworkCore;
 using DataAccessMySqlProvider.Context;
-using DataAccessMySqlProvider.Repository;
 using DataAccessMySqlProvider.Repository.Implementattions;
+using DomainModel.Model.Repository;
 
 namespace RestWithASPNETUdemy
 {

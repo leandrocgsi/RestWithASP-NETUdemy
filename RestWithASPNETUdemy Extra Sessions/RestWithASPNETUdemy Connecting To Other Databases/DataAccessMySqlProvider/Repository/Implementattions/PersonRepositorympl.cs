@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using DataAccessMySqlProvider.Context;
 using DomainModel.Model;
+using DomainModel.Model.Repository;
 
 namespace DataAccessMySqlProvider.Repository.Implementattions
 {
