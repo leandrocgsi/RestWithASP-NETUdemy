@@ -2,9 +2,9 @@
 
 Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's do 0 à Nuvem Com ASP.NET Core 2.0 e Docker](https://www.udemy.com/restful-apis-do-0-a-nuvem-com-aspnet-core-e-docker/?couponCode=GITHUB)
 
-[![Build Status](https://travis-ci.org/leandrocgsi/RestWithASP-NETUdemy.svg?branch=master)](https://travis-ci.org/leandrocgsi/RestWithASP-NETUdemy)
-
 # Links para baixar as ferramentas usadas no curso
+
+### Windows
 
 * [Visual Studio 2017 & Visual Studio Code](https://visualstudio.microsoft.com/pt-br/downloads/)
 
@@ -22,9 +22,26 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 
 * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
+### Linux
+
+
+# Para saber mais
+
+### Fundamentos Teóricos
+
+* [Web Services](www.erudio.com.br/blog/web-services/)
+* [RESTful Web Services](www.erudio.com.br/blog/restful-web-services/)
+* [HTTP Status Codes em Serviços REST](www.erudio.com.br/blog/http-status-codes-em-servicos-rest/)
+* [Entendendo HATEOAS](www.erudio.com.br/blog/en/)
+
+### Fundamentos Práticos
+
+* [Criando uma simples Web API RESTful em .NET Core 2.0](http://www.erudio.com.br/blog/criando-uma-simples-web-api-restful-em-net-core-2-0/)
+* [Criando um endpoint REST com ASP.NET Core](http://www.erudio.com.br/blog/criando-um-endpoint-rest-com-asp-net-core/)
+
 # HTTP Status Codes adotados pelas API's mais famosas do mundo
 
-[Baseado em](https://gist.github.com/vkostyukov/32c84c0c01789425c29a#file-statuses-md)
+Esse tópico se baseia [nesse repositório aqui!](https://gist.github.com/vkostyukov/32c84c0c01789425c29a#file-statuses-md)
 
 |API                   | Status Codes                                                                             |
 |----------------------|------------------------------------------------------------------------------------------|
