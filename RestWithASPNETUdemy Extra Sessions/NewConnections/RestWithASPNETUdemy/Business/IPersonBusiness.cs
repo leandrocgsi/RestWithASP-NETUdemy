@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using DomainModel.Model;
+﻿using RestWithASPNETUdemy.Model;
+using System.Collections.Generic;
 
 namespace RestWithASPNETUdemy.Business
 {

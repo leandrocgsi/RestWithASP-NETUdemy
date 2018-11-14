@@ -1,5 +1,5 @@
-﻿using DomainModel.Model;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using RestWithASPNETUdemy.Model;
 using RestWithASPNETUdemy.Business;
 namespace RestWithASPNETUdemy.Controllers
 {

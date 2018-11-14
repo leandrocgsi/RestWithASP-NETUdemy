@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
-using DataAccessMySqlProvider.Repository;
-using DomainModel.Model;
+using RestWithASPNETUdemy.Model;
 
 namespace RestWithASPNETUdemy.Business.Implementattions
 {

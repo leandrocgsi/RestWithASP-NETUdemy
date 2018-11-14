@@ -19,9 +19,4 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\DataAccessMySqlProvider\DataAccessMySqlProvider.csproj" />
-    <ProjectReference Include="..\DomainModel\DomainModel.csproj" />
-  </ItemGroup>
-
 </Project>
