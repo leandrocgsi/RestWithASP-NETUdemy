@@ -9,9 +9,9 @@ namespace DataAccessMySqlProvider.Repository.Implementattions
 {
     public class PersonRepositoryImpl : IPersonRepository
     {
-        private readonly MySQLContext _context;
+        private readonly PostgreeSQLContext _context;
 
-        public PersonRepositoryImpl(MySQLContext context)
+        public PersonRepositoryImpl(PostgreeSQLContext context)
         {
             _context = context;
         }
