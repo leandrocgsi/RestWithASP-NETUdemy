@@ -25,6 +25,7 @@ namespace RestWithASPNETUdemy
         public void ConfigureServices(IServiceCollection services)
         {
             var connection = Configuration["MySqlConnection:MySqlConnectionString"];
+
             services.AddDbContext<MySQLContext>(options => options.UseMySql(connection));
             services.AddMvc();
 
