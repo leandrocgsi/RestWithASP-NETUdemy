@@ -14,12 +14,12 @@ using DomainModel.Model.Repository;
 //using DataAccessSqliteProvider.Repository.Implementattions;
 
 //Connect to MySQL
-//using DataAccessMySqlProvider.Context;
-//using DataAccessMySqlProvider.Repository.Implementattions;
+using DataAccessMySqlProvider.Context;
+using DataAccessMySqlProvider.Repository.Implementattions;
 
 //Connect to Microsoft SQL Server
-using DataAccessMSSqlServerProvider.Context;
-using DataAccessMSSqlServerProvider.Repository.Implementattions;
+//using DataAccessMSSqlServerProvider.Context;
+//using DataAccessMSSqlServerProvider.Repository.Implementattions;
 
 //Connect to Postgree
 //using DataAccessPostgreeSQLProvider.Context;
@@ -44,16 +44,16 @@ namespace RestWithASPNETUdemy
             services.AddDbContext<SqliteSQLContext>(options => options.UseSqlite(connectionString));*/
 
             //Using a MySQL database
-            /*var connectionString = Configuration["MySqlConnection:MySqlConnectionString"];
-            services.AddDbContext<MySQLContext>(options => options.UseMySql(connectionString)); */
+            var connectionString = Configuration["MySqlConnection:MySqlConnectionString"];
+            services.AddDbContext<MySQLContext>(options => options.UseMySql(connectionString));
 
             //Using a PostgreSQL database
             /*var connectionString = Configuration["PostgreeSqlConnection:PostgreeSqlConnectionString"];
             services.AddDbContext<PostgreeSQLContext>(options => options.UseNpgsql(connectionString));*/
 
             //Using a Microsoft SQL Server
-            var connectionString = Configuration["MSSqlServerConnection:MSSqlServerConnectionString"];
-            services.AddDbContext<MSSQLServerContext>(options => options.UseSqlServer(connectionString));
+            /*var connectionString = Configuration["MSSqlServerConnection:MSSqlServerConnectionString"];
+            services.AddDbContext<MSSQLServerContext>(options => options.UseSqlServer(connectionString)); */
 
             services.AddMvc();
 
