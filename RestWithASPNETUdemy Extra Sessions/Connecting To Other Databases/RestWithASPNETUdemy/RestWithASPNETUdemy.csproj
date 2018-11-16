@@ -19,8 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DataAccessMSSqlProvider\DataAccessMSSqlServerProvider.csproj" />
     <ProjectReference Include="..\DataAccessMySqlProvider\DataAccessMySqlProvider.csproj" />
     <ProjectReference Include="..\DataAccessPostgreSqlProvider\DataAccessPostgreSqlProvider.csproj" />
+    <ProjectReference Include="..\DataAccessSqliteProvider\DataAccessSqliteProvider.csproj" />
     <ProjectReference Include="..\DomainModel\DomainModel.csproj" />
   </ItemGroup>
 
