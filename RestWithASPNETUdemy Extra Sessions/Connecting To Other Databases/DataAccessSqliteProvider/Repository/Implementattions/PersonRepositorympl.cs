@@ -9,9 +9,9 @@ namespace DataAccessSqliteProvider.Repository.Implementattions
 {
     public class PersonRepositoryImpl : IPersonRepository
     {
-        private readonly PostgreeSQLContext _context;
+        private readonly SqliteSQLContext _context;
 
-        public PersonRepositoryImpl(PostgreeSQLContext context)
+        public PersonRepositoryImpl(SqliteSQLContext context)
         {
             _context = context;
         }
