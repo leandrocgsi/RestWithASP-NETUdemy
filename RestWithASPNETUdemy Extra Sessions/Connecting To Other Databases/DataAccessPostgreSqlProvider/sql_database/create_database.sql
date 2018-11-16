@@ -1,45 +1,45 @@
-/*DROP SEQUENCE books_seq CASCADE;
-DROP SEQUENCE persons_seq CASCADE;
-DROP SEQUENCE users_seq CASCADE;
-DROP database rest_with_asp_net_udemy;
+/*drop sequence books_seq cascade;
+drop sequence persons_seq cascade;
+drop sequence users_seq cascade;
+drop database rest_with_asp_net_udemy;
 **/
-CREATE DATABASE rest_with_asp_net_udemy;
-CREATE USER postgres WITH ENCRYPTED PASSWORD 'root';
-GRANT ALL PRIVILEGES ON DATABASE rest_with_asp_net_udemy TO postgres;
+create database rest_with_asp_net_udemy;
+create user postgres with encrypted password 'root';
+grant all privileges on database rest_with_asp_net_udemy to postgres;
 
 
 
-CREATE DATABASE rest_with_asp_net_udemy;
+create database rest_with_asp_net_udemy;
 
 
-CREATE SEQUENCE books_seq;
+create sequence books_seq;
 
-CREATE TABLE IF NOT EXISTS books (
-  id int NOT NULL DEFAULT NEXTVAL ('books_seq'),
-  Author varchar(150),
-  LaunchDate timestamp(6) NOT NULL,
-  Price decimal(65,2) NOT NULL,
-  Title varchar(250),
-  PRIMARY KEY (id)
+create table if not exists books (
+  id int not null default nextval ('books_seq'),
+  author varchar(150),
+  launchdate timestamp(6) not null,
+  price decimal(65,2) not null,
+  title varchar(250),
+  primary key (id)
 )  ;
 
-CREATE SEQUENCE persons_seq;
+create sequence persons_seq;
 
-CREATE TABLE IF NOT EXISTS persons (
-  Id int NOT NULL DEFAULT NEXTVAL ('persons_seq'),
-  FirstName varchar(50) DEFAULT NULL,
-  LastName varchar(50) DEFAULT NULL,
-  Address varchar(50) DEFAULT NULL,
-  Gender varchar(50) DEFAULT NULL,
-  PRIMARY KEY (Id)
+create table if not exists persons (
+  id int not null default nextval ('persons_seq'),
+  firstname varchar(50) default null,
+  lastname varchar(50) default null,
+  address varchar(50) default null,
+  gender varchar(50) default null,
+  primary key (id)
 )  ;
 
-CREATE SEQUENCE users_seq;
+create sequence users_seq;
 
-CREATE TABLE IF NOT EXISTS users (
-  ID int NOT NULL DEFAULT NEXTVAL ('users_seq'),
-  Login varchar(50) NOT NULL,
-  AccessKey varchar(50) NOT NULL,
-  PRIMARY KEY (ID),
-  CONSTRAINT Login UNIQUE  (Login)
+create table if not exists users (
+  id int not null default nextval ('users_seq'),
+  login varchar(50) not null,
+  accesskey varchar(50) not null,
+  primary key (id),
+  constraint login unique  (login)
 )  ;

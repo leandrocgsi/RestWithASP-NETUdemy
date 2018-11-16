@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DataAccessMySqlProvider\DataAccessMySqlProvider.csproj" />
+    <ProjectReference Include="..\DataAccessPostgreSqlProvider\DataAccessPostgreSqlProvider.csproj" />
     <ProjectReference Include="..\DomainModel\DomainModel.csproj" />
   </ItemGroup>
 

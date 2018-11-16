@@ -32,7 +32,7 @@ namespace RestWithASPNETUdemy
             services.AddDbContext<MySQLContext>(options => options.UseMySql(connectionString)); */
 
             //Using a PostgreSQL database
-            var connectionString = Configuration.GetConnectionString("PostgreeSqlConnection:PostgreeSqlConnectionString");
+            var connectionString = Configuration["PostgreeSqlConnection:PostgreeSqlConnectionString"];
 
             services.AddDbContext<PostgreeSQLContext>(options => options.UseNpgsql(connectionString));
 
