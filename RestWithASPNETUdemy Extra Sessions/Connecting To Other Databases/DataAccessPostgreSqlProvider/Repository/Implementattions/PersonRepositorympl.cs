@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System;
 using System.Linq;
-using DataAccessMySqlProvider.Context;
+using DataAccessPostgreeSQLProvider.Context;
 using DomainModel.Model;
 using DomainModel.Model.Repository;
 
-namespace DataAccessMySqlProvider.Repository.Implementattions
+namespace DataAccessPostgreeSQLProvider.Repository.Implementattions
 {
     public class PersonRepositoryImpl : IPersonRepository
     {

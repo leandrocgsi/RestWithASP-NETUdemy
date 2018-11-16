@@ -1,7 +1,7 @@
 ﻿using DomainModel.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace DataAccessMySqlProvider.Context
+namespace DataAccessPostgreeSQLProvider.Context
 {
     public class PostgreeSQLContext : DbContext
     {

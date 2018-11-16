@@ -6,9 +6,11 @@ using Microsoft.Extensions.Logging;
 using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Business.Implementattions;
 using Microsoft.EntityFrameworkCore;
-using DataAccessMySqlProvider.Context;
-using DataAccessMySqlProvider.Repository.Implementattions;
+//using DataAccessMySqlProvider.Context;
+//using DataAccessMySqlProvider.Repository.Implementattions;
 using DomainModel.Model.Repository;
+using DataAccessPostgreeSQLProvider.Context;
+using DataAccessPostgreeSQLProvider.Repository.Implementattions;
 
 namespace RestWithASPNETUdemy
 {
@@ -24,9 +26,16 @@ namespace RestWithASPNETUdemy
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connection = Configuration["MySqlConnection:MySqlConnectionString"];
+            //Using a MySQL database
+            /*var connectionString = Configuration["MySqlConnection:MySqlConnectionString"];
 
-            services.AddDbContext<MySQLContext>(options => options.UseMySql(connection));
+            services.AddDbContext<MySQLContext>(options => options.UseMySql(connectionString)); */
+
+            //Using a PostgreSQL database
+            var connectionString = Configuration.GetConnectionString("PostgreeSqlConnection:PostgreeSqlConnectionString");
+
+            services.AddDbContext<PostgreeSQLContext>(options => options.UseNpgsql(connectionString));
+
             services.AddMvc();
 
             services.AddApiVersioning(option => option.ReportApiVersions = true);
