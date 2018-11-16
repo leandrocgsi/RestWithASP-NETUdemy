@@ -3,7 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DomainModel.Model
 {
-    [Table("persons", Schema = "rest_with_asp_net_udemy")]
+    // Uncomment to connect in Postgree [Table("persons", Schema = "rest_with_asp_net_udemy")]
+    [Table("persons")]
     public class Person
     {
         [Key]
