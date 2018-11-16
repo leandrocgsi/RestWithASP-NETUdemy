@@ -9,9 +9,9 @@ namespace DataAccessMSSqlServerProvider.Repository.Implementattions
 {
     public class PersonRepositoryImpl : IPersonRepository
     {
-        private readonly MSSQLContext _context;
+        private readonly MSSQLServerContext _context;
 
-        public PersonRepositoryImpl(MSSQLContext context)
+        public PersonRepositoryImpl(MSSQLServerContext context)
         {
             _context = context;
         }
