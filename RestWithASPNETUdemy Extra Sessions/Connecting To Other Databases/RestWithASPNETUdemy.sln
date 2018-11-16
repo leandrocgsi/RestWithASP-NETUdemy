@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainModel", "DomainModel\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessMySqlProvider", "DataAccessMySqlProvider\DataAccessMySqlProvider.csproj", "{2F0E97D6-BF96-47B7-BD1D-213CE695BBE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessPostgreSqlProvider", "DataAccessPostgreSqlProvider\DataAccessPostgreSqlProvider.csproj", "{5F368E2C-4A7E-40E4-8810-74844CAECD72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessPostgreSqlProvider", "DataAccessPostgreSqlProvider\DataAccessPostgreSqlProvider.csproj", "{5F368E2C-4A7E-40E4-8810-74844CAECD72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessMSSqlServerProvider", "DataAccessMSSqlProvider\DataAccessMSSqlServerProvider.csproj", "{5AE3464D-1440-41F6-A544-07747D7DDDF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessSqliteProvider", "DataAccessSqliteProvider\DataAccessSqliteProvider.csproj", "{32F2E582-1864-4A46-9DEF-F0D71B22F1A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{5F368E2C-4A7E-40E4-8810-74844CAECD72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F368E2C-4A7E-40E4-8810-74844CAECD72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F368E2C-4A7E-40E4-8810-74844CAECD72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AE3464D-1440-41F6-A544-07747D7DDDF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AE3464D-1440-41F6-A544-07747D7DDDF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AE3464D-1440-41F6-A544-07747D7DDDF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AE3464D-1440-41F6-A544-07747D7DDDF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32F2E582-1864-4A46-9DEF-F0D71B22F1A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F2E582-1864-4A46-9DEF-F0D71B22F1A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F2E582-1864-4A46-9DEF-F0D71B22F1A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F2E582-1864-4A46-9DEF-F0D71B22F1A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
