@@ -16,10 +16,6 @@ namespace DataAccessMySqlProvider.Repository.Implementattions
             _context = context;
         }
 
-        // Metodo responsável por criar uma nova pessoa
-        // nesse momento adicionamos o objeto ao contexto
-        // e finalmente salvamos as mudanças no contexto
-        // na base de dados
         public Person Create(Person person)
         {
             try
@@ -71,8 +67,6 @@ namespace DataAccessMySqlProvider.Repository.Implementattions
             return result;
         }
 
-        // Método responsável por deletar
-        // uma pessoa a partir de um ID
         public void Delete(long id)
         {
             var result = _context.Persons.SingleOrDefault(i => i.Id.Equals(id));
