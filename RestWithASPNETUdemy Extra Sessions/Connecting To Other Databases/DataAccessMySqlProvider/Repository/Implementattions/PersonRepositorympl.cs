@@ -30,19 +30,16 @@ namespace DataAccessMySqlProvider.Repository.Implementattions
             return person;
         }
 
-        // Método responsável por retornar uma pessoa
         public Person FindById(long id)
         {
             return _context.Persons.SingleOrDefault(p => p.Id.Equals(id));
         }
 
-        // Método responsável por retornar todas as pessoas
         public List<Person> FindAll()
         {
             return _context.Persons.ToList();
         }
 
-        // Método responsável por atualizar uma pessoa
         public Person Update(Person person)
         {
             // Verificamos se a pessoa existe na base
