@@ -16,10 +16,6 @@ namespace DataAccessPostgreeSQLProvider.Repository.Implementattions
             _context = context;
         }
 
-        // Metodo responsável por criar uma nova pessoa
-        // nesse momento adicionamos o objeto ao contexto
-        // e finalmente salvamos as mudanças no contexto
-        // na base de dados
         public Person Create(Person person)
         {
             try
@@ -34,19 +30,16 @@ namespace DataAccessPostgreeSQLProvider.Repository.Implementattions
             return person;
         }
 
-        // Método responsável por retornar uma pessoa
         public Person FindById(long id)
         {
             return _context.Persons.SingleOrDefault(p => p.Id.Equals(id));
         }
 
-        // Método responsável por retornar todas as pessoas
         public List<Person> FindAll()
         {
             return _context.Persons.ToList();
         }
 
-        // Método responsável por atualizar uma pessoa
         public Person Update(Person person)
         {
             // Verificamos se a pessoa existe na base
