@@ -60,8 +60,6 @@ namespace DataAccessPostgreeSQLProvider.Repository.Implementattions
             return result;
         }
 
-        // Método responsável por deletar
-        // uma pessoa a partir de um ID
         public void Delete(long id)
         {
             var result = _context.Persons.SingleOrDefault(i => i.Id.Equals(id));
