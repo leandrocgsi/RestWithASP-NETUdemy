@@ -26,9 +26,6 @@ namespace RestWithASPNETUdemy.Controllers
             return Ok(_personBusiness.FindAll());
         }
 
-        //Mapeia as requisições GET para http://localhost:{porta}/api/persons/v1/{id}
-        //recebendo um ID como no Path da requisição
-        //Get com parâmetros para o FindById --> Busca Por ID
         [HttpGet("{id}")]
         public IActionResult Get(long id)
         {
@@ -37,8 +34,6 @@ namespace RestWithASPNETUdemy.Controllers
             return Ok(person);
         }
 
-        //Mapeia as requisições POST para http://localhost:{porta}/api/persons/v1/
-        //O [FromBody] consome o Objeto JSON enviado no corpo da requisição
         [HttpPost]
         public IActionResult Post([FromBody]Person person)
         {
