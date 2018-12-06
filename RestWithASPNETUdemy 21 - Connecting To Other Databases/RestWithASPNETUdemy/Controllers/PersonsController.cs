@@ -41,8 +41,6 @@ namespace RestWithASPNETUdemy.Controllers
             return new  ObjectResult(_personBusiness.Create(person));
         }
 
-        //Mapeia as requisições PUT para http://localhost:{porta}/api/persons/v1/
-        //O [FromBody] consome o Objeto JSON enviado no corpo da requisição
         [HttpPut]
         public IActionResult Put([FromBody]Person person)
         {
@@ -52,9 +50,6 @@ namespace RestWithASPNETUdemy.Controllers
             return new ObjectResult(updatedPerson);
         }
 
-
-        //Mapeia as requisições DELETE para http://localhost:{porta}/api/persons/v1/{id}
-        //recebendo um ID como no Path da requisição
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
