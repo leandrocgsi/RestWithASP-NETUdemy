@@ -40,13 +40,11 @@ namespace DataAccessSqliteProvider.Repository.Implementattions
             return _context.Persons.SingleOrDefault(p => p.Id.Equals(id));
         }
 
-        // Método responsável por retornar todas as pessoas
         public List<Person> FindAll()
         {
             return _context.Persons.ToList();
         }
 
-        // Método responsável por atualizar uma pessoa
         public Person Update(Person person)
         {
             if (!Exists(person.Id)) return null;
