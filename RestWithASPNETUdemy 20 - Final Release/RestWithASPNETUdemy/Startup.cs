@@ -71,15 +71,10 @@ namespace RestWithASPNETUdemy
                 paramsValidation.ValidAudience = tokenConfigurations.Audience;
                 paramsValidation.ValidIssuer = tokenConfigurations.Issuer;
 
-                // Validates the signing of a received token
                 paramsValidation.ValidateIssuerSigningKey = true;
 
-                // Checks if a received token is still valid
                 paramsValidation.ValidateLifetime = true;
 
-                // Tolerance time for the expiration of a token (used in case
-                // of time synchronization problems between different
-                // computers involved in the communication process)
                 paramsValidation.ClockSkew = TimeSpan.Zero;
             });
 
