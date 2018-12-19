@@ -78,8 +78,6 @@ namespace RestWithASPNETUdemy
                 paramsValidation.ClockSkew = TimeSpan.Zero;
             });
 
-            // Enables the use of the token as a means of
-            // authorizing access to this project's resources
             services.AddAuthorization(auth =>
             {
                 auth.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
@@ -87,7 +85,6 @@ namespace RestWithASPNETUdemy
                     .RequireAuthenticatedUser().Build());
             });
 
-            //Content negociation - Support to XML and JSON
             services.AddMvc(options =>
             {
                 options.RespectBrowserAcceptHeader = true;
@@ -97,12 +94,10 @@ namespace RestWithASPNETUdemy
             })
             .AddXmlSerializerFormatters();
 
-            //HATEOAS filter definitions
             var filterOptions = new HyperMediaFilterOptions();
             filterOptions.ObjectContentResponseEnricherList.Add(new BookEnricher());
             filterOptions.ObjectContentResponseEnricherList.Add(new PersonEnricher());
 
-            //Service inject
             services.AddSingleton(filterOptions);
 
             //Versioning
