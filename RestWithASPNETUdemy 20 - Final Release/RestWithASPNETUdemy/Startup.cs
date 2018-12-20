@@ -100,10 +100,8 @@ namespace RestWithASPNETUdemy
 
             services.AddSingleton(filterOptions);
 
-            //Versioning
             services.AddApiVersioning(option => option.ReportApiVersions = true);
 
-            //Add Swagger Service
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1",
