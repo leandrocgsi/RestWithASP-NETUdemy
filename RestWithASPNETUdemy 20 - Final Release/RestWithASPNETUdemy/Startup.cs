@@ -159,12 +159,10 @@ namespace RestWithASPNETUdemy
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
 
-            //Starting our API in Swagger page
             var option = new RewriteOptions();
             option.AddRedirect("^$", "swagger");
             app.UseRewriter(option);
 
-            //Adding map routing
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
