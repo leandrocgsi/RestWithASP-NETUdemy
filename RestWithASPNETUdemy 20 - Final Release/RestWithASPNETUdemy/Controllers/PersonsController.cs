@@ -152,9 +152,6 @@ namespace RestWithASPNETUdemy.Controllers
             return new OkObjectResult(updatedPerson);
         }
 
-        // Configura o Swagger para a operação
-        // http://localhost:{porta}/api/persons/v1/{id}
-        // O [SwaggerResponse(XYZ)] define os códigos de retorno 400 e 401
         [HttpDelete("{id}")]
         [SwaggerResponse(204)]
         [SwaggerResponse(400)]
