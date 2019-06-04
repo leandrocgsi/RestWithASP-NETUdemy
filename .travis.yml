@@ -9,6 +9,6 @@ before_install:
 before_script:
   - nuget restore RestWithASPNETUdemy.sln
 script:
-  - cd "/RestWithASPNETUdemy 01 - Calculator/"
+  - cd RestWithASPNETUdemy\ 01\ -\ Calculator/
   - echo "Entered /RestWithASPNETUdemy 01 - Calculator/."
   - dotnet build
