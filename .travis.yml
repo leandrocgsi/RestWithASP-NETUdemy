@@ -6,9 +6,8 @@ dotnet: 2.0.0
 solution: RestWithASPNETUdemy.sln
 before_install:
   - sudo apt-get update
-before_script:
-  - nuget restore RestWithASPNETUdemy.sln
 script:
   - cd RestWithASPNETUdemy\ 01\ -\ Calculator/
   - echo "Entered /RestWithASPNETUdemy 01 - Calculator/."
+  - dotnet restore
   - dotnet build
