@@ -76,7 +76,7 @@ Usado por pelo menos **quatro deles**: 200, 201, 304, 400, 401, 403, 404, 405, 4
 
 Usado por pelo menos **cinco deles**: 200, 201, 400, 401, 403, 404, 405, 429, 500, 503
 
-Usado por pelo menos **todos eles**: 200, 400
+Usado por **todos eles**: 200, 400
 
 [tw]: https://dev.twitter.com/overview/api/response-codes
 [stripe]: https://stripe.com/docs/api#errors
