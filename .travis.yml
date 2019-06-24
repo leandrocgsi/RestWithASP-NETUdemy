@@ -7,7 +7,7 @@ solution: RestWithASPNETUdemy.sln
 before_install:
   - sudo apt-get update
 script:
-  - cd RestWithASPNETUdemy\ 01\ -\ Calculator/
-  - echo "Entered /RestWithASPNETUdemy 01 - Calculator/."
+  - cd RestWithASPNETUdemy\ 20\ -\ Final\ Release/
+  - echo "RestWithASPNETUdemy\ 20\ -\ Final\ Release/."
   - dotnet restore
   - dotnet build
