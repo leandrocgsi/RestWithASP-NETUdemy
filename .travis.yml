@@ -1,13 +1,23 @@
-language: csharp
-dist: trusty
 sudo: required
+dist: bionic
+language: csharp
 mono: none
 dotnet: 2.0.0
-solution: RestWithASPNETUdemy.sln
+python:
+  - "3.6"
+services: docker
 before_install:
-  - sudo apt-get update
-script:
   - cd RestWithASPNETUdemy\ 20\ -\ Final\ Release/
   - echo "RestWithASPNETUdemy\ 20\ -\ Final\ Release/."
-  - dotnet restore
-  - dotnet build
+script:
+  - docker-compose build 
+before_deploy:
+  - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin  
+deploy:
+  provider: script
+  script:
+    docker push leandrocgsi/restwithaspnetudemy-api;
+  on:
+    branch: master
+notifications:
+  email: false 
