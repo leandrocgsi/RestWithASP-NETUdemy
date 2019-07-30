@@ -6,7 +6,7 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 
 # Links para baixar as ferramentas usadas no curso
 
-![Example Page](https://github.com/leandrocgsi/RestWithASP-NETUdemy/blob/master/Images/udemy.png?raw=true
+![Curso RESTful API's com ASP.NET Core](https://github.com/leandrocgsi/RestWithASP-NETUdemy/blob/master/Images/udemy.png?raw=true)
 
 ### Windows
 
