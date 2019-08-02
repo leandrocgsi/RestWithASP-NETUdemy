@@ -4,6 +4,8 @@
 
 Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's do 0 à Nuvem Com ASP.NET Core 2.0 e Docker](https://www.udemy.com/restful-apis-do-0-a-nuvem-com-aspnet-core-e-docker/?couponCode=GTHB_FLASH_SALE2019)
 
+[<img src="https://github.com/leandrocgsi/RestWithASP-NETUdemy/blob/master/Images/udemy.png?raw=true">](https://www.udemy.com/restful-apis-do-0-a-nuvem-com-aspnet-core-e-docker/?couponCode=GTHB_FLASH_SALE2019)
+
 # Links para baixar as ferramentas usadas no curso
 
 ### Windows
