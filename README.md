@@ -2,10 +2,6 @@
 
 [![Build Status](https://travis-ci.org/leandrocgsi/RestWithASP-NETUdemy.svg?branch=master)](https://travis-ci.org/leandrocgsi/RestWithASP-NETUdemy)
 
-Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's do 0 à Nuvem Com ASP.NET Core 2.0 e Docker](https://www.udemy.com/restful-apis-do-0-a-nuvem-com-aspnet-core-e-docker/?couponCode=GTHB_FLASH_SALE2019)
-
-[<img src="https://github.com/leandrocgsi/RestWithASP-NETUdemy/blob/master/Images/udemy.png?raw=true">](https://www.udemy.com/restful-apis-do-0-a-nuvem-com-aspnet-core-e-docker/?couponCode=GTHB_FLASH_SALE2019)
-
 # REST API's RESTFul do 0 à Nuvem Com ASP.NET Core 2 e Docker
 
 [![Image](https://github.com/leandrocgsi/RestWithSpringBootUdemy/blob/master/Images/rest_apis_restful_do_0_a_nuvem_com_asp_net_core_e_docker.png?raw=true "REST API's RESTFul do 0 à Nuvem Com ASP.NET Core 2 e Docker")](https://www.udemy.com/restful-apis-do-0-a-nuvem-com-aspnet-core-e-docker/?couponCode=GTHB_FLASH_SALE2019)
@@ -19,6 +15,10 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's d
 [![Image](https://github.com/leandrocgsi/RestWithSpringBootUdemy/blob/master/Images/rest_apis_restful_do_0_à_nuvem_com_spring_boot_2_e_docker.png?raw=true "REST API's RESTFul do 0 à Nuvem Com Spring Boot 2.x e Docker")](https://www.udemy.com/restful-apis-do-0-a-nuvem-com-springboot-e-docker/?couponCode=GTHB_FLASH_SALE2019)
 
 [![Image](https://github.com/leandrocgsi/RestWithSpringBootUdemy/blob/master/Images/rest_apis_restful_from_0_to_aws_with_spring_boot_and_docker.png?raw=true "REST API's RESTFul from 0 to AWS with Spring Boot and Docker")](https://www.udemy.com/course/rest-apis-restful-from-0-to-aws-with-spring-boot-and-docker/?referralCode=9D88FD51272501E56FAB)
+
+Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's do 0 à Nuvem Com ASP.NET Core 2.0 e Docker](https://www.udemy.com/restful-apis-do-0-a-nuvem-com-aspnet-core-e-docker/?couponCode=GTHB_FLASH_SALE2019)
+
+[<img src="https://github.com/leandrocgsi/RestWithASP-NETUdemy/blob/master/Images/udemy.png?raw=true">](https://www.udemy.com/restful-apis-do-0-a-nuvem-com-aspnet-core-e-docker/?couponCode=GTHB_FLASH_SALE2019)
 
 # Links para baixar as ferramentas usadas no curso
 
