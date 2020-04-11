@@ -16,10 +16,6 @@
 
 [![Image](https://github.com/leandrocgsi/RestWithSpringBootUdemy/blob/master/Images/rest_apis_restful_from_0_to_aws_with_spring_boot_and_docker.png?raw=true "REST API's RESTFul from 0 to AWS with Spring Boot and Docker")](https://www.udemy.com/course/rest-apis-restful-from-0-to-aws-with-spring-boot-and-docker/?referralCode=9D88FD51272501E56FAB)
 
-Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's do 0 à Nuvem Com ASP.NET Core 2.0 e Docker](https://www.udemy.com/restful-apis-do-0-a-nuvem-com-aspnet-core-e-docker/?couponCode=GTHB_FLASH_SALE2019)
-
-[<img src="https://github.com/leandrocgsi/RestWithASP-NETUdemy/blob/master/Images/udemy.png?raw=true">](https://www.udemy.com/restful-apis-do-0-a-nuvem-com-aspnet-core-e-docker/?couponCode=GTHB_FLASH_SALE2019)
-
 # Links para baixar as ferramentas usadas no curso
 
 ### Windows
@@ -111,3 +107,8 @@ Usado por **todos eles**: 200, 400
 # Exemplos
 
 [Limitando a Quantidade de Requests](https://github.com/stefanprodan/AspNetCoreRateLimit)
+
+
+Este é o repositório dos codigos fonte desenvolvidos no curso [RESTFul API's do 0 à Nuvem Com ASP.NET Core 2.0 e Docker](https://www.udemy.com/restful-apis-do-0-a-nuvem-com-aspnet-core-e-docker/?couponCode=GTHB_FLASH_SALE2019)
+
+[<img src="https://github.com/leandrocgsi/RestWithASP-NETUdemy/blob/master/Images/udemy.png?raw=true">](https://www.udemy.com/restful-apis-do-0-a-nuvem-com-aspnet-core-e-docker/?couponCode=GTHB_FLASH_SALE2019)
