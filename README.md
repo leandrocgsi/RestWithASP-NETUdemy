@@ -1,5 +1,7 @@
 # Rest With ASP.NET Udemy
 
+## [DEPRECIADO - Acesse o código da versão mais nova ASP.NET Core 5](https://github.com/leandrocgsi/RestWithASP-NET5Udemy)
+
 [![Build Status](https://travis-ci.org/leandrocgsi/RestWithASP-NETUdemy.svg?branch=master)](https://travis-ci.org/leandrocgsi/RestWithASP-NETUdemy)
 
 # REST API's RESTFul do 0 à Nuvem Com ASP.NET Core 2 e Docker
