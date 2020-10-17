@@ -1,6 +1,6 @@
 # Rest With ASP.NET Udemy
 
-## [DEPRECIADO - Acesse o código da versão mais nova em ASP.NET Core 5](https://github.com/leandrocgsi/RestWithASP-NET5Udemy)
+## [DEPRECIADO - Acesse aqui o código da versão mais nova em ASP.NET Core 5](https://github.com/leandrocgsi/RestWithASP-NET5Udemy)
 
 [![Build Status](https://travis-ci.org/leandrocgsi/RestWithASP-NETUdemy.svg?branch=master)](https://travis-ci.org/leandrocgsi/RestWithASP-NETUdemy)
 
